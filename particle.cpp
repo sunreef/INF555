@@ -8,7 +8,7 @@
 Particle::Particle(double x, double y, double z, double weight, double radius) : pos(x, y, z), w(weight), r(radius) {
 }
 
-void Particle::print() const{
+void Particle::print() const {
     std::cout << "Position: (" << pos.x << ", " << pos.y << ", " << pos.z << ")  ";
     std::cout << "Weight: " << w << "  Radius: " << r << std::endl;
 }

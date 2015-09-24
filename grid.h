@@ -12,21 +12,21 @@
 using namespace std;
 
 
-
 class Grid {
     static constexpr double sizeThreshold = 0.4;
     Vect center;
     double size;
 
-    Grid* parent;
-    vector<Grid*> children;
-    vector<Particle*> particles;
+    Grid *parent;
+    vector<Grid *> children;
+    vector<Particle *> particles;
 
 public:
-    Grid(Grid* p, Vect c, double s);
+    Grid(Grid *p, Vect c, double s);
+
     ~Grid();
 
-    void insert(Particle& p);
+    void insert(Particle &p);
 
 };
 

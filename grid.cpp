@@ -35,9 +35,9 @@ void Grid::insert(Particle &p) {
 
     if (children.size() == 0) {
         particles.push_back(&p);
-//
-//        p.print();
-//        std::cout << center.x << ", " << center.y << ", " << center.z << std::endl;
+
+        p.print();
+        std::cout << center.x << ", " << center.y << ", " << center.z << std::endl;
         return;
     }
     else {
