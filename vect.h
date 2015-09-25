@@ -13,7 +13,7 @@ struct Vect {
 
     double norm();
 
-    Vect operator+(Vect p2) {
+    Vect operator+(Vect p2) const {
         return Vect(x + p2.x, y + p2.y, z + p2.z);
     }
 
@@ -23,7 +23,7 @@ struct Vect {
         z += p2.z;
     }
 
-    Vect operator-(Vect p2) {
+    Vect operator-(Vect p2) const {
         return Vect(x - p2.x, y - p2.y, z - p2.z);
     }
 
@@ -33,7 +33,7 @@ struct Vect {
         z -= p2.z;
     }
 
-    Vect operator*(double l) {
+    Vect operator*(double l) const {
         return Vect(x * l, y * l, z * l);
     }
 
@@ -43,11 +43,11 @@ struct Vect {
         z *= l;
     }
 
-    double operator*(Vect p2) {
+    double operator*(Vect p2) const {
         return x * p2.x + y * p2.y + z * p2.z;
     }
 
-    Vect operator^(Vect p2) {
+    Vect operator^(Vect p2) const {
         return Vect(y * p2.z - z * p2.y, z * p2.x - x * p2.z, x * p2.y - y * p2.x);
     }
 };

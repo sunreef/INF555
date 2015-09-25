@@ -5,7 +5,6 @@
 #ifndef INF555_PROJECT_CELL_H
 #define INF555_PROJECT_CELL_H
 
-#include "vect.h"
 #include "particle.h"
 #include <vector>
 
@@ -16,7 +15,7 @@ struct Cell {
     double size;
     Vect corner;
 
-    vector<Particle *> particles;
+    vector<Particle> particles;
     int particlesCount;
 
     Cell();

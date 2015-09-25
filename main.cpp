@@ -4,6 +4,7 @@
 #include "grid.h"
 #include "kernel.h"
 
+
 using namespace std;
 
 
@@ -20,15 +21,11 @@ int main() {
         double y = (double) (rand() % 1000) / 200.0;
         double z = (double) (rand() % 1000) / 200.0;
 
-        Particle p(x, y, z, 1, 0.1);
+        Particle p(x, y, z, 1.0, 0.1);
         g.insert(p);
     }
-    cout << g.getNumberOfParticles() << endl;
-
-    cout << g.getCell(0, 0, 0).particlesCount << endl;
 
     Kernel w(0.4);
-    cout << w(0.0) << endl;
 
     t = clock() - t;
 

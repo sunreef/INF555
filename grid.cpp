@@ -5,9 +5,9 @@
 #include "grid.h"
 
 Grid::Grid(Vect c, double s) : corner(c), size(s), numberOfParticles(0) {
-    rows = (int) size / sizeThreshold;
+    rows = (int) (size / sizeThreshold);
 
-    cells = new Cell[rows * rows * rows];
+    cells = vector<Cell>(rows * rows * rows);
 
     for (int x = 0; x < rows; x++) {
         for (int y = 0; y < rows; y++) {
@@ -21,10 +21,9 @@ Grid::Grid(Vect c, double s) : corner(c), size(s), numberOfParticles(0) {
 }
 
 Grid::~Grid() {
-    delete cells;
 }
 
-void Grid::insert(Particle &p) {
+void Grid::insert(const Particle &p) {
     Vect v = p.pos - corner;
 
     int x = v.x / sizeThreshold;
@@ -42,10 +41,11 @@ void Grid::insert(Particle &p) {
 
 }
 
-int Grid::getNumberOfParticles() {
-    return numberOfParticles;
-}
 
 Cell Grid::getCell(int x, int y, int z) {
     return cells[z + rows * (y + rows * x)];
+}
+
+int Grid::getNumberOfParticles() {
+    return numberOfParticles;
 }
