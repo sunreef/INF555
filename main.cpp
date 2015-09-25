@@ -18,7 +18,7 @@ int main() {
 
     for (int i = 0; i < 100000; i++) {
         double x = (double) (rand() % 1000) / 200.0;
-        double y = (double) (rand() % 1000) / 200.0;
+        double y = (double) (rand() % 500) / 200.0;
         double z = (double) (rand() % 1000) / 200.0;
 
         Particle p(x, y, z, 1.0, 0.1);

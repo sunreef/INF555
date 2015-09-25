@@ -23,7 +23,7 @@ Grid::Grid(Vect c, double s) : corner(c), size(s), numberOfParticles(0) {
 Grid::~Grid() {
 }
 
-void Grid::insert(const Particle &p) {
+bool Grid::insert(Particle &p) {
     Vect v = p.pos - corner;
 
     int x = v.x / sizeThreshold;
@@ -32,15 +32,18 @@ void Grid::insert(const Particle &p) {
 
     if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
         cout << "The particle is not inside the grid. It won't be inserted." << endl;
-        return;
+        return false;
     }
     else {
-        cells[z + rows * (y + rows * x)].add(p);
+        int index = z + rows * (y + rows * x);
+        cells[index].add(p);
+        p.cellX = x;
+        p.cellY = y;
+        p.cellZ = z;
         numberOfParticles++;
+        return true;
     }
-
 }
-
 
 Cell Grid::getCell(int x, int y, int z) {
     return cells[z + rows * (y + rows * x)];
@@ -48,4 +51,10 @@ Cell Grid::getCell(int x, int y, int z) {
 
 int Grid::getNumberOfParticles() {
     return numberOfParticles;
+}
+
+vector<Particle> Grid::neighbours(const Particle &p, double l) {
+    
+
+    return std::vector<Particle>();
 }

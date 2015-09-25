@@ -12,6 +12,7 @@ struct Particle {
     Vect pos;
     double w;
     double r;
+    int cellX, cellY, cellZ;
 
     Particle(double x, double y, double z, double weight, double radius);
 

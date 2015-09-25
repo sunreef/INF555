@@ -16,7 +16,7 @@ class Grid {
     Vect corner;
     double size;
     int numberOfParticles;
-    int rows;
+
 
     vector<Cell> cells;
 
@@ -25,11 +25,14 @@ public:
 
     ~Grid();
 
-    void insert(const Particle &p);
+    int rows;
+    bool insert(Particle &p);
 
     int getNumberOfParticles();
 
     Cell getCell(int x, int y, int z);
+
+    vector<Particle> neighbours(const Particle &p,  double l);
 
 };
 
