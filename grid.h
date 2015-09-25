@@ -8,25 +8,31 @@
 #include <vector>
 #include "vect.h"
 #include "particle.h"
+#include "cell.h"
 
 using namespace std;
 
 
 class Grid {
     static constexpr double sizeThreshold = 0.4;
-    Vect center;
+    
+    Vect corner;
     double size;
+    int numberOfParticles;
+    int rows;
 
-    Grid *parent;
-    vector<Grid *> children;
-    vector<Particle *> particles;
+    Cell *cells = 0;
 
 public:
-    Grid(Grid *p, Vect c, double s);
+    Grid(Vect c, double s);
 
     ~Grid();
 
     void insert(Particle &p);
+
+    int getNumberOfParticles();
+
+    Cell getCell(int x, int y, int z);
 
 };
 

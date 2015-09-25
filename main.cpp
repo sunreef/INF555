@@ -1,36 +1,34 @@
 #include <iostream>
 #include <ctime>
-#include <thread>
 #include "particle.h"
 #include "grid.h"
+#include "kernel.h"
 
 using namespace std;
 
-void insertRandomParticle(Grid &g, int number) {
-    for (int i = 0; i < number; i++) {
-        double x = (double) (rand() % 1000) / 200.0;
-        double y = (double) (rand() % 100) / 200.0;
-        double z = (double) (rand() % 100) / 200.0;
-
-        Particle p(x, y, z, 1, 0.1);
-        g.insert(p);
-    }
-}
 
 int main() {
 
     clock_t t = clock();
     Vect v(0, 0, 0);
-    Grid g(0, v, 10);
+    Grid g(v, 10);
 
+    srand(0);
 
-    vector<thread> threads;
-    for (int j = 0; j < 8; j++) {
-        threads.push_back(thread([&] { insertRandomParticle(g, 1000); }));
+    for (int i = 0; i < 100000; i++) {
+        double x = (double) (rand() % 1000) / 200.0;
+        double y = (double) (rand() % 1000) / 200.0;
+        double z = (double) (rand() % 1000) / 200.0;
+
+        Particle p(x, y, z, 1, 0.1);
+        g.insert(p);
     }
-    for (int j = 0; j < 8; j++) {
-        threads[j].join();
-    }
+    cout << g.getNumberOfParticles() << endl;
+
+    cout << g.getCell(0, 0, 0).particlesCount << endl;
+
+    Kernel w(0.4);
+    cout << w(0.0) << endl;
 
     t = clock() - t;
 
