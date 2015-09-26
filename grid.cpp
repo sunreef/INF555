@@ -54,7 +54,7 @@ int Grid::getNumberOfParticles() {
 }
 
 vector<Particle> Grid::neighbours(const Particle &p, double l) {
-    
+
 
     return std::vector<Particle>();
 }
