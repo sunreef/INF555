@@ -26,13 +26,14 @@ public:
     ~Grid();
 
     int rows;
+
     bool insert(Particle &p);
 
     int getNumberOfParticles();
 
     Cell getCell(int x, int y, int z);
 
-    vector<Particle> neighbours(const Particle &p,  double l);
+    vector<Particle> neighbours(const Particle &p, double l);
 
 };
 
