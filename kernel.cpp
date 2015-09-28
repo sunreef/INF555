@@ -9,7 +9,7 @@ Kernel::Kernel(double smoothingDistance) : h(smoothingDistance) {
 
 double Kernel::operator()(double x) {
 
-    double q = x / h;
+    double q = sqrt(x) / h;
 
     if (q >= 2) {
         return 0;

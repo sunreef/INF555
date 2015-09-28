@@ -10,8 +10,11 @@
 
 struct Particle {
     Vect pos;
+    Vect speed;
     double w;
     double r;
+    double rho;
+    double pressure;
     int cellX, cellY, cellZ;
 
     Particle(double x, double y, double z, double weight, double radius);

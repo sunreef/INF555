@@ -11,7 +11,7 @@ using namespace std;
 
 
 class Grid {
-    static constexpr double sizeThreshold = 0.4;
+    double sizeThreshold = 0.8;
 
     Vect corner;
     double size;
