@@ -7,6 +7,7 @@
 
 #include <math.h>
 #include <iostream>
+#include "vect.h"
 
 class Kernel {
 private:
@@ -16,6 +17,7 @@ public:
     Kernel(double smoothingDistance);
 
     double operator()(double x);
+    Vect grad(Vect pi, Vect pj);
 
 };
 

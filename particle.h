@@ -7,6 +7,9 @@
 
 #include "vect.h"
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 struct Particle {
     Vect pos;
@@ -16,6 +19,7 @@ struct Particle {
     double rho;
     double pressure;
     int cellX, cellY, cellZ;
+    vector<Particle*> neighbours;
 
     Particle(double x, double y, double z, double weight, double radius);
 

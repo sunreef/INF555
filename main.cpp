@@ -42,6 +42,8 @@ int main() {
     cv.spin();
 
 
+    t = clock();
+
 //    for (double x = 0; x < 10.0; x += 0.2) {
 //        for (double y = 0; y < 10.0; y += 0.2) {
 //            for (double z = 0; z < 10.0; z += 0.2) {
@@ -57,24 +59,43 @@ int main() {
             for (int z = 0; z < g.rows; z++) {
                 Cell c = g.getCell(x, y, z);
 
-                for (Particle p: c.particles) {
+                for (Particle* p: c.particles) {
 
-                    vector<Particle> neighbours = g.neighbours(p, 0.4);
+                    g.neighbours(*p, 0.4, p->neighbours);
+
 
                     double rho = 0;
 
-                    for (Particle p2: neighbours) {
-                        rho += p2.w * w((p.pos - p2.pos).norm());
+                    for (Particle* p2: p->neighbours) {
+                        p2->print();
+                        rho += p2->w * w((p->pos - p2->pos).norm());
                     }
 
-                    p.rho = rho;
+                    p->rho = rho;
 
                     double pressure = 0.5 * (pow(rho, 7) - 1);
-                    p.pressure = pressure;
+                    p->pressure = pressure;
                 }
             }
         }
     }
+
+    for (int x = 0; x < g.rows; x++) {
+        for (int y = 0; y < g.rows; y++) {
+            for (int z = 0; z < g.rows; z++) {
+                Cell c = g.getCell(x, y, z);
+                for (Particle* p: c.particles) {
+
+                    double gradP = 0;
+
+
+
+
+                }
+            }
+        }
+    }
+
 
 
     t = clock() - t;

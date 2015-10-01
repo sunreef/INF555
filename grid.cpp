@@ -52,23 +52,18 @@ Cell Grid::getCell(int x, int y, int z) {
 int Grid::getNumberOfParticles() {
     return numberOfParticles;
 }
-
-vector<Particle> Grid::neighbours(const Particle &p, double l) {
-
-    vector<Particle> result;
+void Grid::neighbours(const Particle &p, double l, vector<Particle*> result) {
     for (int x = max(0, p.cellX - 1); x <= min(rows - 1, p.cellX + 1); x++) {
         for (int y = max(0, p.cellY - 1); y <= min(rows - 1, p.cellY + 1); y++) {
             for (int z = max(0, p.cellZ - 1); z <= min(rows - 1, p.cellZ + 1); z++) {
                 Cell c = getCell(x, y, z);
                 for (int i = 0; i < c.particlesCount; i++) {
-                    Particle p2 = c.particles[i];
-                    if ((p.pos - p2.pos).norm() < l * l) {
+                    Particle* p2 = c.particles[i];
+                    if ((p.pos - p2->pos).norm() < l * l) {
                         result.push_back(p2);
                     }
                 }
             }
         }
     }
-
-    return result;
 }

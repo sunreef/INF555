@@ -13,7 +13,7 @@ Cell::Cell(Vect c, double s) : corner(c), size(s) {
 }
 
 void Cell::add(Particle p) {
-    particles.push_back(p);
+    particles.push_back(&p);
     particlesCount++;
 }
 

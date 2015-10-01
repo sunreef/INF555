@@ -15,7 +15,7 @@ struct Cell {
     double size;
     Vect corner;
 
-    vector<Particle> particles;
+    vector<Particle*> particles;
     int particlesCount;
 
     Cell();
