@@ -25,7 +25,8 @@ struct Cell {
 
     ~Cell();
 
-    void add(Particle p);
+    void add(shared_ptr<Particle> p);
+    bool isEmpty();
 
 
 };

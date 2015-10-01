@@ -11,13 +11,16 @@ Cell::Cell() : corner(0, 0, 0), size(0), particlesCount(0) {
 
 Cell::Cell(Vect c, double s) : corner(c), size(s) {
     particlesCount = 0;
-    particles = vector<shared_ptr<Particle>>();
 }
 
-void Cell::add(Particle p) {
-    particles.push_back(make_shared<Particle>(p));
+void Cell::add(shared_ptr<Particle> p) {
+    particles.push_back(p);
     particlesCount++;
 }
 
 Cell::~Cell() {
+}
+
+bool Cell::isEmpty() {
+    return (particles.size() == 0);
 }
