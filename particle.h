@@ -12,7 +12,11 @@
 
 using namespace std;
 
-struct Particle {
+
+class Particle {
+
+public:
+    static int particlesCount;
     Vect pos;
     Vect speed;
     double w;
@@ -27,6 +31,13 @@ struct Particle {
     Particle(Vect &p, double weight, double radius);
 
     void print() const;
+
+
+    int getId() { return id; }
+
+private:
+
+    int id;
 };
 
 

@@ -35,7 +35,10 @@ bool Grid::insert(Particle &p) {
         return false;
     }
     else {
-        cells[z + rows * (y + rows * x)].add(p);
+        shared_ptr<Particle> s = make_shared<Particle>(p);
+        cells[z + rows * (y + rows * x)].add(s);
+        particles.push_back(s);
+
         p.cellX = x;
         p.cellY = y;
         p.cellZ = z;
@@ -52,7 +55,7 @@ int Grid::getNumberOfParticles() {
     return numberOfParticles;
 }
 
-void Grid::neighbours(shared_ptr<Particle> p, double l, vector<shared_ptr<Particle>> result) {
+void Grid::neighbours(shared_ptr<Particle> p, double l) {
     for (int x = max(0, p->cellX - 1); x <= min(rows - 1, p->cellX + 1); x++) {
         for (int y = max(0, p->cellY - 1); y <= min(rows - 1, p->cellY + 1); y++) {
             for (int z = max(0, p->cellZ - 1); z <= min(rows - 1, p->cellZ + 1); z++) {
@@ -61,10 +64,23 @@ void Grid::neighbours(shared_ptr<Particle> p, double l, vector<shared_ptr<Partic
                     shared_ptr<Particle> p2 = c.particles[i];
                     double norm = (p->pos - p2->pos).norm();
                     if (norm < l * l && norm > 0) {
-                        result.push_back(p2);
+                        p->neighbours.push_back(p2);
                     }
                 }
             }
         }
     }
 }
+
+void Grid::update(Particle p) {
+    int id = p.getId();
+    int x = p.pos.x / sizeThreshold;
+    int y = p.pos.y / sizeThreshold;
+    int z = p.pos.z / sizeThreshold;
+
+    p.cellX = x;
+    p.cellY = y;
+    p.cellZ = z;
+}
+
+
