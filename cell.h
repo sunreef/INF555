@@ -7,6 +7,7 @@
 
 #include "particle.h"
 #include <vector>
+#include <memory>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ struct Cell {
     double size;
     Vect corner;
 
-    vector<Particle*> particles;
+    vector<shared_ptr<Particle>> particles;
     int particlesCount;
 
     Cell();

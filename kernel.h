@@ -17,6 +17,7 @@ public:
     Kernel(double smoothingDistance);
 
     double operator()(double x);
+
     Vect grad(Vect pi, Vect pj);
 
 };

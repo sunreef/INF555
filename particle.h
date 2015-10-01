@@ -8,6 +8,7 @@
 #include "vect.h"
 #include <iostream>
 #include <vector>
+#include <memory>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ struct Particle {
     double rho;
     double pressure;
     int cellX, cellY, cellZ;
-    vector<Particle*> neighbours;
+    vector<shared_ptr<Particle>> neighbours;
 
     Particle(double x, double y, double z, double weight, double radius);
 

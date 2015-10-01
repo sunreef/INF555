@@ -33,7 +33,7 @@ public:
 
     Cell getCell(int x, int y, int z);
 
-    void neighbours(const Particle &p, double l, vector<Particle*> result);
+    void neighbours(shared_ptr<Particle> p, double l, vector<shared_ptr<Particle>> result);
 
 };
 
