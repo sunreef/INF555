@@ -25,10 +25,10 @@ int timeInMilli() {
     int sec = atoi(str_sec.c_str());
     int milli = t.tv_usec / 1000;
 
-/*cout << hr    << endl;
-  cout << min   << endl;
-  cout << sec   << endl;
-  cout << milli << endl;*/
+//    cout << hr << endl;
+//    cout << min << endl;
+//    cout << sec << endl;
+//    cout << milli << endl;
 
     int timeInMilli = (((hr * 60) + min) * 60 + sec) * 1000 + milli;
     return timeInMilli;
@@ -44,40 +44,40 @@ int main() {
 
     PointCloud<PointXYZRGB>::Ptr pc(new PointCloud<PointXYZRGB>(10, 10, PointXYZRGB(0, 255, 0)));
 
-//    for (int i = 0; i < 50000; i++) {
-//        double x = (double) (rand() % 1000) / 200.0;
-//        double y = (double) (rand() % 1000) / 200.0;
-//        double z = (double) (rand() % 1000) / 200.0;
-//
-//        Particle p(x, y, z, 1.0, 0.1);
-//        g.insert(p);
-//
-//        PointXYZRGB pt(0, 255, 0);
-//        pt.x = x;
-//        pt.y = y;
-//        pt.z = z;
-//
-//        pc->push_back(pt);
-//    }
-//
-//    visualization::PCLVisualizer cv("Cloud");
-//
-//    cv.addPointCloud(PointCloud<PointXYZRGB>::ConstPtr(pc));
-//
-//    cv.spin();
+    for (int i = 0; i < 500000; i++) {
+        double x = (double) (rand() % 1000) / 200.0;
+        double y = (double) (rand() % 1000) / 200.0;
+        double z = (double) (rand() % 1000) / 200.0;
+
+        Particle p(x, y, z, 1.0, 0.1);
+        g.insert(p);
+
+        PointXYZRGB pt(0, 255, 0);
+        pt.x = x;
+        pt.y = y;
+        pt.z = z;
+
+        pc->push_back(pt);
+    }
+
+    visualization::PCLVisualizer cv("Cloud");
+
+    cv.addPointCloud(PointCloud<PointXYZRGB>::ConstPtr(pc));
+
+    cv.spin();
 
 
     t = clock();
     int a = timeInMilli();
 
-    for (double x = 0; x < 10.0; x += 0.2) {
-        for (double y = 0; y < 10.0; y += 0.2) {
-            for (double z = 0; z < 10.0; z += 0.2) {
-                Particle p = Particle(x, y, z, 1, 0.05);
-                g.insert(p);
-            }
-        }
-    }
+//    for (double x = 0; x < 10.0; x += 0.2) {
+//        for (double y = 0; y < 10.0; y += 0.2) {
+//            for (double z = 0; z < 10.0; z += 0.2) {
+//                Particle p = Particle(x, y, z, 1, 0.05);
+//                g.insert(p);
+//            }
+//        }
+//    }
 
     Kernel w(0.1);
     int n = 0;
@@ -104,7 +104,7 @@ int main() {
     t = clock() - t;
 
 
-    cout << (double) t / CLOCKS_PER_SEC << endl;
-    cout << b - a << endl;
+    cout << "Machine time(biased by multithreading): " <<(double) t / CLOCKS_PER_SEC << endl;
+    cout << "Real time: " <<(double) (b - a)/1000.0  << endl;
     return 0;
 }
