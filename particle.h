@@ -41,4 +41,5 @@ private:
 };
 
 
+
 #endif //INF555_PROJECT_PARTICLE_H

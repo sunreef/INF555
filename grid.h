@@ -5,20 +5,23 @@
 #ifndef INF555_PROJECT_GRID_H
 #define INF555_PROJECT_GRID_H
 
+#include <thread>
+#include <mutex>
+#include <deque>
 #include "cell.h"
 
 using namespace std;
 
 
 class Grid {
+
     double sizeThreshold = 0.2;
 
     Vect corner;
     double size;
     int numberOfParticles;
-
-
     vector<Cell> cells;
+
     vector<shared_ptr<Particle>> particles;
 
 public:
@@ -28,15 +31,19 @@ public:
 
     int rows;
 
-    bool insert(Particle &p);
+    bool insert(Particle& p);
 
     int getNumberOfParticles();
 
-    Cell getCell(int x, int y, int z);
+    Cell getCell(int cell);
 
-    void neighbours(shared_ptr<Particle> p, double l);
+    void neighbours(shared_ptr<Particle>& p, double l);
 
-    void update(Particle p);
+    void computeNeighbours(double l);
+
+    void update(Particle& p);
+
+    shared_ptr<Particle> getParticle(int i);
 
 
 //    template< Particle>

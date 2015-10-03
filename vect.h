@@ -10,6 +10,7 @@ struct Vect {
     double x, y, z;
 
     Vect(double x1, double y1, double z1);
+    Vect();
 
     double norm();
 

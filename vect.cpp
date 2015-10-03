@@ -11,3 +11,5 @@ double Vect::norm() {
     return x * x + y * y + z * z;
 }
 
+Vect::Vect(): x(0), y(0), z(0) {
+}
