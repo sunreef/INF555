@@ -7,7 +7,7 @@
 
 #include "vect.h"
 #include <iostream>
-#include <vector>
+#include <set>
 #include <memory>
 
 using namespace std;
@@ -24,7 +24,7 @@ public:
     double rho;
     double pressure;
     int cellX, cellY, cellZ;
-    vector<shared_ptr<Particle>> neighbours;
+    set<shared_ptr<Particle>> neighbours;
 
     Particle(double x, double y, double z, double weight, double radius);
 
@@ -34,8 +34,6 @@ public:
 
 
     int getId() { return id; }
-
-private:
 
     int id;
 };

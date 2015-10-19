@@ -51,6 +51,18 @@ struct Vect {
     Vect operator^(Vect p2) const {
         return Vect(y * p2.z - z * p2.y, z * p2.x - x * p2.z, x * p2.y - y * p2.x);
     }
+
+    double& operator[](int i) {
+        if(i == 0) {
+            return x;
+        }
+        if(i == 1) {
+            return y;
+        }
+        if(i == 2) {
+            return z;
+        }
+    }
 };
 
 

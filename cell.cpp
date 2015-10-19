@@ -18,6 +18,16 @@ void Cell::add(shared_ptr<Particle> p) {
     particlesCount++;
 }
 
+void Cell::remove(shared_ptr<Particle> p) {
+    for(vector<shared_ptr<Particle>>::iterator it = particles.begin(); it != particles.end(); it++) {
+        if((*it)->id == p->id) {
+            particles.erase(it);
+            particlesCount--;
+            break;
+        }
+    }
+}
+
 Cell::~Cell() {
 }
 

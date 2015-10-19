@@ -2,74 +2,70 @@
 #define __CALCULUS_H_
 
 
-
-class Calculus
-{
+class Calculus {
 private:
-	double viscosity;
-	int numberOfParticles;
-	Grid *grid;
+    double viscosity;
+    int numberOfParticles;
+    Grid *grid;
 
-	static Vect calcule_gradient_pressure(Particle *p, Kernel *w_kernel)
-	{
-		Vect result = 0 ;
-		double current_density = p->rho;
+    static Vect computeGradientPressure(shared_ptr<Particle> p, Kernel *w_kernel) {
+        Vect result(0, 0, 0);
+        double current_density = p->rho;
 
-		for(int j = 0 ; j < p->neighbours.size(); j++)
-		{
-			double temp_density = p->neighbours[j]->rho;
-			double temp = p->pressure / (current_density * current_density) + p->neighbours[j]->pressure / ( temp_density * temp_density);
+        for (shared_ptr<Particle> neighbour: p->neighbours) {
+            double temp_density = neighbour->rho;
+            double temp = p->pressure / (current_density * current_density) +
+                          neighbour->pressure / (temp_density * temp_density);
 
-			temp*=this->neighbours[j]->w;
-			Vect temp_vec = w_kernel->grad(p->pos, p->neighbours[j]->pos);
+            temp *= neighbour->w;
+            Vect temp_vec = w_kernel->grad(p->pos, neighbour->pos);
 
-			result.x += temp * temp_vec.x;
-			result.y += temp * temp_vec.y;
-			result.z += temp * temp_vec.z;
-		}
+            result.x += temp * temp_vec.x;
+            result.y += temp * temp_vec.y;
+            result.z += temp * temp_vec.z;
+        }
 
-		result.x *= current_density;
-		result.y *= current_density;
-		result.z *= current_density;
-		return result;
-	}
-	static double calcule_laplace_speed_coordinate(int index, Particle *p, Kernel *w_kernel)
-	{
-		double result = 0;
-		double current_density = p->rho;
-		for(int j = 0 ; j < p->neighbours.size(); j++)
-		{
-			double temp_density = p->neighbours[j]->rho;
-			double A_ij = p->speed[index] - p->neighbours[j]->speed[index];
-			Vect x_ij = p->pos - p->neighbours[j]->pos;
+        result.x *= current_density;
+        result.y *= current_density;
+        result.z *= current_density;
+        return result;
+    }
 
-			double temp = p->neighbours[j]->w / (temp_density) * A_ij;
-			
-			double scalar_product = w_kernel->grad(p->pos, p->neighbours[j]->pos) * x_ij;
-			temp *= scalar_product;
-			double denominator = x_ij * x_ij;
-			denominator += 0.001 * w_kernel->h * w_kernel->h;
-			temp/=denominator;
-			result+= temp;
-		}
+    static double computeLaplaceSeedCoordinate(int index, shared_ptr<Particle> p, Kernel *w_kernel) {
+        double result = 0;
+        double current_density = p->rho;
+        for (shared_ptr<Particle> neighbour: p->neighbours) {
+            double temp_density = neighbour->rho;
+            double A_ij = p->speed[index] - neighbour->speed[index];
+            Vect x_ij = p->pos - neighbour->pos;
 
-		return 2 * result;
+            double temp = neighbour->w / (temp_density) * A_ij;
 
-	}
-	static Vect calcule_laplace_speed(Particle *p, Kernel *w_kernel)
-	{
+            double scalar_product = w_kernel->grad(p->pos, neighbour->pos) * x_ij;
+            temp *= scalar_product;
+            double denominator = x_ij * x_ij;
+            denominator += 0.001 * w_kernel->getSmoothingDistance() * w_kernel->getSmoothingDistance();
+            temp /= denominator;
+            result += temp;
+        }
 
-		  Vect result(0,0,0);
-		  for(int i = 0 ; i < 3; i++)
-		  {
-		  	result[i] = calcule_laplace_speed_coordinate(i, p, w_kernel);
-		  }
+        return 2 * result;
 
-		  return result;
+    }
 
-	}
+    static Vect computeLaplaceSeed(shared_ptr<Particle> p, Kernel *w_kernel) {
+
+        Vect result(0, 0, 0);
+        for (int i = 0; i < 3; i++) {
+            result[i] = computeLaplaceSeedCoordinate(i, p, w_kernel);
+        }
+
+        return result;
+
+    }
+
 public:
-	virtual void proceed();
+    virtual void proceed();
 };
 
 #endif

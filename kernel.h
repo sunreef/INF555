@@ -20,6 +20,10 @@ public:
 
     Vect grad(Vect pi, Vect pj);
 
+    double getSmoothingDistance() {
+        return h;
+    }
+
 };
 
 

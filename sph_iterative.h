@@ -10,16 +10,16 @@ class SPH_Iterative : public Calculus
 {
 private:
 
-	double compute_density(Particle *p);
-	double compute_pressure(Particle *p);
+	double compute_density(shared_ptr<Particle> p);
+	double compute_pressure(shared_ptr<Particle> p);
 
 	void non_recurrent_part();
 	void recurrent_part();
 	double nu;
 	Kernel * w_kernel;
 	double delta_t;
-	vector<Particle> modified_particles;
-	void SPH_Iterative::modify_grid();
+	vector<shared_ptr<Particle>> modified_particles;
+	void modify_grid();
 	double rho_zero;
 	double k;
 

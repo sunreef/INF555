@@ -36,58 +36,83 @@ int timeInMilli() {
 
 int main() {
 
-    clock_t t = clock();
-    Vect v(0, 0, 0);
-    Grid g(v, 10);
 
-    srand(t);
+    double kernelSmoothingLength = 0.2;
+
+    clock_t tps = clock();
+
+    Kernel w(kernelSmoothingLength);
+    Vect v(0, 0, 0);
+    Grid g(v, 10, 2 * kernelSmoothingLength);
+
+    srand(tps);
 
     PointCloud<PointXYZRGB>::Ptr pc(new PointCloud<PointXYZRGB>(10, 10, PointXYZRGB(0, 255, 0)));
 
-    for (int i = 0; i < 500000; i++) {
-        double x = (double) (rand() % 1000) / 200.0;
-        double y = (double) (rand() % 1000) / 200.0;
-        double z = (double) (rand() % 1000) / 200.0;
+    for (int i = 0; i < 5000; i++) {
+        double x = (double) (rand() % 500) / 200.0;
+        double y = (double) (rand() % 200) / 200.0;
+        double z = (double) (rand() % 500) / 200.0;
 
-        Particle p(x, y, z, 1.0, 0.1);
+        shared_ptr<Particle> p = make_shared<Particle>(x, y, z, 1.0, 0.1);
+        p->speed = Vect(0.1, 0.1, 0.1);
         g.insert(p);
 
-        PointXYZRGB pt(0, 255, 0);
+        PointXYZRGB pt(255, 0, 0);
         pt.x = x;
         pt.y = y;
         pt.z = z;
-
         pc->push_back(pt);
     }
 
-    visualization::PCLVisualizer cv("Cloud");
-
-    cv.addPointCloud(PointCloud<PointXYZRGB>::ConstPtr(pc));
-
-    cv.spin();
-
-
-    t = clock();
-    int a = timeInMilli();
 
 //    for (double x = 0; x < 10.0; x += 0.2) {
 //        for (double y = 0; y < 10.0; y += 0.2) {
 //            for (double z = 0; z < 10.0; z += 0.2) {
 //                Particle p = Particle(x, y, z, 1, 0.05);
 //                g.insert(p);
+//                PointXYZRGB pt(0, 255, 0);
+//                pt.x = x;
+//                pt.y = y;
+//                pt.z = z;
+//                pc->push_back(pt);
 //            }
 //        }
 //    }
+    tps = clock();
+    int a = timeInMilli();
+    visualization::PCLVisualizer cv("Cloud");
 
-    Kernel w(0.1);
+//    cv.addPointCloud(PointCloud<PointXYZRGB>::ConstPtr(pc));
+//    cv.spinOnce(1);
+//    for (int t = 0; t < 100; t++) {
+//        g.computeNeighbours();
+//        PointCloud<PointXYZRGB>::Ptr pc2(new PointCloud<PointXYZRGB>(10, 10, PointXYZRGB(0, 255, 0)));
+//        for (int i = 0; i < g.particles.size(); i++) {
+//            shared_ptr<Particle> pa = g.getParticle(i);
+//            g.update(pa);
+//            PointXYZRGB pt(255, 0, 0);
+//            pt.x = pa->pos.x;
+//            pt.y = pa->pos.y;
+//            pt.z = pa->pos.z;
+//            pc2->push_back(pt);
+//        }
+//        cv.removeAllPointClouds();
+//        cv.addPointCloud(PointCloud<PointXYZRGB>::ConstPtr(pc2));
+//        cv.spinOnce();
+//        cout << "Time " << t << endl;
+//    }
+
+
+
     int n = 0;
 
-    g.computeNeighbours(0.2);
+    g.computeNeighbours();
 
     for (int i = 0; i < g.getNumberOfParticles(); i++) {
         shared_ptr<Particle> p = g.getParticle(i);
 
-
+        cout << p->neighbours.size() << endl;
         double rho = 0;
         for (shared_ptr<Particle> p2: p->neighbours) {
             rho += p2->w * w((p->pos - p2->pos).norm());
@@ -101,10 +126,10 @@ int main() {
 
 
     int b = timeInMilli();
-    t = clock() - t;
+    tps = clock() - tps;
 
 
-    cout << "Machine time(biased by multithreading): " <<(double) t / CLOCKS_PER_SEC << endl;
-    cout << "Real time: " <<(double) (b - a)/1000.0  << endl;
+    cout << "Machine time(biased by multithreading): " << (double) tps / CLOCKS_PER_SEC << endl;
+    cout << "Real time: " << (double) (b - a) / 1000.0 << endl;
     return 0;
 }

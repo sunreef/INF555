@@ -29,6 +29,7 @@ struct Cell {
     bool isEmpty();
 
 
+    void remove(shared_ptr<Particle> p);
 };
 
 
