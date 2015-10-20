@@ -44,7 +44,7 @@ private:
             double scalar_product = w_kernel->grad(p->pos, neighbour->pos) * x_ij;
             temp *= scalar_product;
             double denominator = x_ij * x_ij;
-            denominator += 0.001 * w_kernel->getSmoothingDistance() * w_kernel->getSmoothingDistance();
+            denominator += 0.01 * w_kernel->getSmoothingDistance() * w_kernel->getSmoothingDistance();
             temp /= denominator;
             result += temp;
         }

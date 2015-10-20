@@ -21,14 +21,15 @@ double Kernel::operator()(double x) {
     if (q >= 0) {
         return (3.0 / (2.0 * M_PI)) * (2.0 / 3.0 - q * q * (1 - 1.0 / 2.0 * q)) / (h * h * h);
     }
-    std::cout << "Error: the value given to the kernel is not a positive value." << std::endl;
+//    std::cout << "Error: the value given to the kernel is not a positive value." << std::endl;
     return -1;
 }
 
-Vect Kernel::grad(Vect pi, Vect pj) {
-
-    double q2 = (pi - pj).norm();
-    double q = sqrt(q2) / h;
+Vect Kernel::grad(Vect pi, Vect pj, double norm) {
+    if(norm == 9999) {
+        norm = (pi - pj).norm();
+    }
+    double q = sqrt(norm) / h;
 
     double temp;
 
@@ -43,6 +44,4 @@ Vect Kernel::grad(Vect pi, Vect pj) {
     }
 
     return Vect((pi.x > pj.x) ? 1 : -1, (pi.y > pj.y) ? 1 : -1, (pi.z > pi.z) ? 1 : -1) * temp;
-
-
 }

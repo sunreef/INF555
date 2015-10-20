@@ -5,7 +5,7 @@
 #include "cell.h"
 
 Cell::Cell() : corner(0, 0, 0), size(0), particlesCount(0) {
-
+    particles = vector<shared_ptr<Particle>>();
 
 }
 
@@ -19,8 +19,8 @@ void Cell::add(shared_ptr<Particle> p) {
 }
 
 void Cell::remove(shared_ptr<Particle> p) {
-    for(vector<shared_ptr<Particle>>::iterator it = particles.begin(); it != particles.end(); it++) {
-        if((*it)->id == p->id) {
+    for (vector<shared_ptr<Particle>>::iterator it = particles.begin(); it != particles.end(); it++) {
+        if ((*it)->id == p->id) {
             particles.erase(it);
             particlesCount--;
             break;

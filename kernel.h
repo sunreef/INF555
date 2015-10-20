@@ -18,7 +18,7 @@ public:
 
     double operator()(double x);
 
-    Vect grad(Vect pi, Vect pj);
+    Vect grad(Vect pi, Vect pj, double norm = 9999);
 
     double getSmoothingDistance() {
         return h;

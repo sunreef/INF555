@@ -7,7 +7,7 @@
 mutex mtx;
 mutex mtx2;
 
-Grid::Grid(Vect c, int r, double thresh) : corner(c), rows(r), numberOfParticles(0), sizeThreshold(thresh) {
+Grid::Grid(Vect c, int r, double thresh, double time) : corner(c), rows(r), numberOfParticles(0), sizeThreshold(thresh), timeStep(time) {
 
     cells = vector<Cell>(rows * rows * rows);
 
@@ -73,9 +73,7 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
 
                     double norm = (p->pos - p2->pos).norm();
                     if (norm < l && norm > 0) {
-
                         p->neighbours.insert(p2);
-
                     }
                 }
             }
@@ -86,9 +84,7 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
 void Grid::update(shared_ptr<Particle> p) {
 
 
-    p->pos.x += p->speed.x;
-    p->pos.y += p->speed.y;
-    p->pos.z += p->speed.z;
+    p->pos += p->speed * timeStep;
 
     if (p->pos.x < corner.x) {
         p->pos.x += 2 * (corner.x - p->pos.x);
@@ -126,7 +122,8 @@ void Grid::update(shared_ptr<Particle> p) {
     int y = v.y / sizeThreshold;
     int z = v.z / sizeThreshold;
     if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
-        cout << x << ", " << y << ", " << z << endl;
+        Cell c = cells[p->cellZ + rows * (p->cellY + rows * p->cellX)];
+        c.remove(p);
         cout << "The particle is not inside the grid. It won't be inserted." << endl;
         return;
     }
@@ -152,7 +149,7 @@ shared_ptr<Particle> Grid::getParticle(int i) {
 }
 
 
-void parallelNeighbourSearch(Grid &g, vector<shared_ptr<Particle>> &particles, vector<int> &progress, int &count,
+void parallelNeighbourSearch(Grid &g, vector<shared_ptr<Particle>> &particles, int &count,
                              double l, int id) {
     bool loop = true;
     while (loop) {
@@ -160,14 +157,13 @@ void parallelNeighbourSearch(Grid &g, vector<shared_ptr<Particle>> &particles, v
         int temp = count;
         count++;
         mtx.unlock();
-        shared_ptr<Particle> p = particles[temp];
-        if (count > particles.size() - 1) {
+        if (temp > particles.size() - 1) {
             break;
         }
         else {
-            progress[id] = temp;
+            shared_ptr<Particle> p = particles[temp];
+            p->neighbours.clear();
             g.neighbours(p, l);
-
         }
     }
 
@@ -185,7 +181,7 @@ void Grid::computeNeighbours() {
     cout << "Calculating neighbours using " << numberOfThreads << " threads..." << endl;
 
     for (int i = 0; i < numberOfThreads; i++) {
-        threads.push_back(thread(&parallelNeighbourSearch, std::ref(*this), std::ref(particles), std::ref(progress),
+        threads.push_back(thread(&parallelNeighbourSearch, std::ref(*this), std::ref(particles),
                                  std::ref(count), sizeThreshold, i));
     }
     for (int i = 0; i < numberOfThreads; i++) {

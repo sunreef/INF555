@@ -17,6 +17,7 @@ using namespace std;
 class Grid {
 public:
     double sizeThreshold = 0.4;
+    double timeStep;
 
     Vect corner;
     int numberOfParticles;
@@ -25,7 +26,7 @@ public:
     vector<shared_ptr<Particle>> particles;
 
 
-    Grid(Vect c, int r, double thresh);
+    Grid(Vect c, int r, double thresh, double time);
 
     ~Grid();
 
