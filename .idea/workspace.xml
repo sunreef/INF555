@@ -12,12 +12,7 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eed9ad83-9bdf-449c-84aa-046fe6120a8f" name="Default" comment="Minor fixes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/INF555___Project" afterPath="$PROJECT_DIR$/bin/INF555___Project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grid.cpp" afterPath="$PROJECT_DIR$/grid.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grid.h" afterPath="$PROJECT_DIR$/grid.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kernel.cpp" afterPath="$PROJECT_DIR$/kernel.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
+    <list default="true" id="eed9ad83-9bdf-449c-84aa-046fe6120a8f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="INF555 - Project.iws" />
@@ -292,6 +287,13 @@
       <option name="number" value="Default" />
       <updated>1443115393646</updated>
     </task>
+    <task id="LOCAL-00001" summary="Minor fixes">
+      <created>1446560713537</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1446560713537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
