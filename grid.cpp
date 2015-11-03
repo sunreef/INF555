@@ -7,7 +7,8 @@
 mutex mtx;
 mutex mtx2;
 
-Grid::Grid(Vect c, int r, double thresh, double time) : corner(c), rows(r), numberOfParticles(0), sizeThreshold(thresh), timeStep(time) {
+Grid::Grid(Vect c, int r, double thresh, double time) : corner(c), rows(r), numberOfParticles(0), sizeThreshold(thresh),
+                                                        timeStep(time) {
 
     cells = vector<Cell>(rows * rows * rows);
 
@@ -59,18 +60,14 @@ int Grid::getNumberOfParticles() {
 
 
 void Grid::neighbours(shared_ptr<Particle> &p, double l) {
+    p->neighbours.clear();
     l *= l;
     for (int x = max(0, p->cellX - 1); x <= min(rows - 1, p->cellX + 1); x++) {
         for (int y = max(0, p->cellY - 1); y <= min(rows - 1, p->cellY + 1); y++) {
             for (int z = max(0, p->cellZ - 1); z <= min(rows - 1, p->cellZ + 1); z++) {
                 int cell = z + rows * (y + rows * x);
-                Cell c = getCell(cell);
-                if (c.particles.size() == 0) {
-                    continue;
-                }
-                for (int i = 0; i < c.particlesCount; i++) {
-                    shared_ptr<Particle> p2 = c.particles[i];
-
+                Cell c = cells[cell];
+                for (shared_ptr<Particle> p2: c.particles) {
                     double norm = (p->pos - p2->pos).norm();
                     if (norm < l && norm > 0) {
                         p->neighbours.insert(p2);
@@ -81,40 +78,108 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
     }
 }
 
+void Grid::update() {
+
+    double speedRatio = 1.0;
+
+    for (Cell c: cells) {
+        vector<shared_ptr<Particle>> toRemove;
+        for (shared_ptr<Particle> p:c.particles) {
+            p->pos += p->speed * timeStep;
+
+            if (p->pos.x < corner.x) {
+                p->pos.x = 2 * (corner.x) - p->pos.x;
+                p->speed.x *= -speedRatio;
+            }
+
+            if (p->pos.y < corner.y) {
+                p->pos.y = 2 * (corner.y) - p->pos.y;
+                p->speed.y *= -speedRatio;
+            }
+
+            if (p->pos.z < corner.z) {
+                p->pos.z = 2 * (corner.z) - p->pos.z;
+                p->speed.z *= -speedRatio;
+            }
+            double size = sizeThreshold * (rows);
+
+            if (p->pos.x > corner.x + size) {
+                p->pos.x = 2 * (corner.x + size) - p->pos.x;
+                p->speed.x *= -speedRatio;
+            }
+
+            if (p->pos.y > corner.y + size) {
+                p->pos.y = 2 * (corner.y + size) - p->pos.y;
+                p->speed.y *= -speedRatio;
+            }
+
+            if (p->pos.z > corner.z + size) {
+                p->pos.z = 2 * (corner.z + size) - p->pos.z;
+                p->speed.z *= -speedRatio;
+            }
+
+            Vect v = p->pos;
+            int x = v.x / sizeThreshold;
+            int y = v.y / sizeThreshold;
+            int z = v.z / sizeThreshold;
+            if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
+                toRemove.push_back(p);
+                remove(p);
+//                cout << p->pos.x << "  " << p->pos.y << "  " << p->pos.z << endl;
+                cout << p->rho << endl;
+                cout << "The particle is not inside the grid. It won't be inserted." << endl;
+                continue;
+            }
+            if (x != p->cellX || y != p->cellY || z != p->cellZ) {
+                toRemove.push_back(p);
+                cells[z + rows * (y + rows * x)].add(p);
+
+                p->cellX = x;
+                p->cellY = y;
+                p->cellZ = z;
+            }
+        }
+        for (shared_ptr<Particle> p:toRemove) {
+            c.remove(p);
+        }
+    }
+}
+
 void Grid::update(shared_ptr<Particle> p) {
 
+    double speedRatio = 0.5;
 
     p->pos += p->speed * timeStep;
 
     if (p->pos.x < corner.x) {
-        p->pos.x += 2 * (corner.x - p->pos.x);
-        p->speed.x *= -1;
+        p->pos.x = 2 * (corner.x) - p->pos.x;
+        p->speed.x *= -speedRatio;
     }
 
     if (p->pos.y < corner.y) {
-        p->pos.y += 2 * (corner.y - p->pos.y);
-        p->speed.y *= -1;
+        p->pos.y = 2 * (corner.y) - p->pos.y;
+        p->speed.y *= -speedRatio;
     }
 
     if (p->pos.z < corner.z) {
-        p->pos.z += 2 * (corner.z - p->pos.z);
-        p->speed.z *= -1;
+        p->pos.z = 2 * (corner.z) - p->pos.z;
+        p->speed.z *= -speedRatio;
     }
     double size = sizeThreshold * rows;
 
     if (p->pos.x > corner.x + size) {
-        p->pos.x += 2 * (corner.x + size - p->pos.x);
-        p->speed.x *= -1;
+        p->pos.x = 2 * (corner.x + size) - p->pos.x;
+        p->speed.x *= -speedRatio;
     }
 
     if (p->pos.y > corner.y + size) {
-        p->pos.y += 2 * (corner.y + size - p->pos.y);
-        p->speed.y *= -1;
+        p->pos.y = 2 * (corner.y + size) - p->pos.y;
+        p->speed.y *= -speedRatio;
     }
 
     if (p->pos.z > corner.z + size) {
-        p->pos.z += 2 * (corner.z + size - p->pos.z);
-        p->speed.z *= -1;
+        p->pos.z = 2 * (corner.z + size) - p->pos.z;
+        p->speed.z *= -speedRatio;
     }
 
     Vect v = p->pos;
@@ -124,6 +189,7 @@ void Grid::update(shared_ptr<Particle> p) {
     if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
         Cell c = cells[p->cellZ + rows * (p->cellY + rows * p->cellX)];
         c.remove(p);
+        cout << p->pos.x << "  " << p->pos.y << "  " << p->pos.z << endl;
         cout << "The particle is not inside the grid. It won't be inserted." << endl;
         return;
     }
@@ -136,7 +202,16 @@ void Grid::update(shared_ptr<Particle> p) {
         p->cellY = y;
         p->cellZ = z;
     }
+}
 
+void Grid::remove(shared_ptr<Particle> p) {
+    for (vector<shared_ptr<Particle>>::iterator it = particles.begin(); it != particles.end(); it++) {
+        if ((*it)->id == p->id) {
+            particles.erase(it);
+            numberOfParticles--;
+            break;
+        }
+    }
 }
 
 shared_ptr<Particle> Grid::getParticle(int i) {
@@ -162,7 +237,6 @@ void parallelNeighbourSearch(Grid &g, vector<shared_ptr<Particle>> &particles, i
         }
         else {
             shared_ptr<Particle> p = particles[temp];
-            p->neighbours.clear();
             g.neighbours(p, l);
         }
     }
@@ -187,4 +261,6 @@ void Grid::computeNeighbours() {
     for (int i = 0; i < numberOfThreads; i++) {
         threads[i].join();
     }
+
+    cout << "Done" << endl;
 }

@@ -43,6 +43,9 @@ public:
     void computeNeighbours();
 
     void update(shared_ptr<Particle> p);
+    void update();
+
+    void remove(shared_ptr<Particle> p);
 
     shared_ptr<Particle> getParticle(int i);
 
