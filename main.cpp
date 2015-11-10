@@ -13,7 +13,7 @@ double viscosity = 0.00001;
 double rhoInitial = 1.0;
 int totalTime = 10;
 double timeStep = 0.001;
-double stiffness = 0.1;
+double stiffness = 10;
 int numberOfParticles = 1000;
 double kernelSmoothingLength = 0.1;
 double gridSize = 2.0;
@@ -43,7 +43,7 @@ Vect computeViscosityForce(shared_ptr<Particle> p, Kernel &w) {
     double d = 0.01 * w.getSmoothingDistance() * w.getSmoothingDistance();
 
     for (shared_ptr<Particle> n: p->neighbours) {
-        if(n->rho == 0) {
+        if (n->rho == 0) {
             continue;
         }
         double temp = 1.0 / n->rho;
@@ -54,7 +54,7 @@ Vect computeViscosityForce(shared_ptr<Particle> p, Kernel &w) {
 
         result += (p->speed - n->speed) * temp;
     }
-    result *= viscosity;
+    result *= 2 * viscosity;
 
 
     return result;
@@ -75,12 +75,12 @@ double computeNewRho(shared_ptr<Particle> p, Kernel &w) {
 
 Vect computePressureForce(shared_ptr<Particle> p, Kernel &w) {
     Vect result(0, 0, 0);
-    if(p->rho == 0) {
+    if (p->rho == 0) {
         return result;
     }
 
     for (shared_ptr<Particle> n: p->neighbours) {
-        result += w.grad(p->pos, n->pos) * ((p->pressure / (p->rho * p->rho) + n->pressure / (n->rho * n->rho)) * n->w);
+        result += w.grad(p->pos, n->pos) * ((p->pressure / (p->rho * p->rho) + n->pressure / (n->rho * n->rho)));
     }
     return result;
 }
@@ -102,7 +102,7 @@ int main() {
     for (int i = 0; i < numberOfParticles; i++) {
         double x = (double) (rand() % 200) / 200.0;
         double z = (double) (rand() % 200) / 200.0;
-        double y = (double) (rand() % 100) / 200.0 - (x*x + z*z) / 4;
+        double y = (double) (rand() % 100) / 200.0 - (x * x + z * z) / 4;
 
 
         shared_ptr<Particle> p = make_shared<Particle>(x, y, z, mass, 0.1);
@@ -139,17 +139,18 @@ int main() {
     visualization::PCLVisualizer cv("Cloud");
 
 
-
     cv.addPointCloud(PointCloud<PointXYZRGB>::ConstPtr(pc));
     cv.spinOnce(1);
     int steps = totalTime / timeStep;
     for (int t = 0; t < steps; t++) {
-        g.computeNeighbours();
+        if (t % 5 == 0) {
+            g.computeNeighbours();
+        }
 
         Vect gravity = Vect(0, -9.8, 0);
         for (shared_ptr<Particle> p : g.particles) {
             Vect visco = computeViscosityForce(p, w);
-            p->speed += (visco + gravity) * (timeStep);
+            p->speed += (gravity) * (timeStep);
         }
 
         for (shared_ptr<Particle> p : g.particles) {
@@ -167,7 +168,7 @@ int main() {
         g.update();
 
         PointCloud<PointXYZRGB>::Ptr pc2(new PointCloud<PointXYZRGB>(10, 10, PointXYZRGB(0, 255, 0)));
-        cv.setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 10, "cloud");
+        cv.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 10, "cloud");
         for (int i = 0; i < g.particles.size(); i++) {
             shared_ptr<Particle> pa = g.getParticle(i);
             PointXYZRGB pt(255, 0, 0);

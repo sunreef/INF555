@@ -7,16 +7,59 @@
 mutex mtx;
 mutex mtx2;
 
+
 Grid::Grid(Vect c, int r, double thresh, double time) : corner(c), rows(r), numberOfParticles(0), sizeThreshold(thresh),
                                                         timeStep(time) {
 
+//    double wallRho = 1.0;
+//    double wallPressure = 10000;
+//    int sampling = 10;
+//    double sampleSize = sizeThreshold / sampling;
     cells = vector<Cell>(rows * rows * rows);
 
     for (int x = 0; x < rows; x++) {
         for (int y = 0; y < rows; y++) {
             for (int z = 0; z < rows; z++) {
-                cells[z + rows * (y + rows * x)] = Cell(
-                        corner + Vect(x * sizeThreshold, y * sizeThreshold, z * sizeThreshold), sizeThreshold);
+                Cell c(corner + Vect(x * sizeThreshold, y * sizeThreshold, z * sizeThreshold), sizeThreshold);
+                cells[z + rows * (y + rows * x)] = c;
+
+//                if (x == 0 || x == rows - 1) {
+//                    for (int i = 0; i < sampling; i++) {
+//                        for (int j = 0; j < sampling; j++) {
+//                            Vect v = c.corner + Vect(((x==0) ? 0 : sizeThreshold), j * sampleSize, i * sampleSize);
+//                            cout << v.x << endl;
+//                            Particle p(v, 1.0, 0.1);
+//                            p.rho = wallRho;
+//                            p.pressure = wallPressure;
+//                            c.add(make_shared<Particle>(v, 1.0, 0.1));
+//                            cout << "added wall aprticle" << endl;
+//                        }
+//                    }
+//                    cout << c.particles.size() << endl;
+//                }
+//                if (y == 0 || y == rows - 1) {
+//                    for (int i = 0; i < sampling; i++) {
+//                        for (int j = 0; j < sampling; j++) {
+//                            Vect v = c.corner + Vect(j * sampleSize,((y==0) ? 0 : sizeThreshold), i * sampleSize);
+//                            Particle p(v, 1.0, 0.1);
+//                            p.rho = wallRho;
+//                            p.pressure = wallPressure;
+//                            c.add(make_shared<Particle>(p));
+//                        }
+//                    }
+//                }
+//                if (z == 0 || z == rows - 1) {
+//                    for (int i = 0; i < sampling; i++) {
+//                        for (int j = 0; j < sampling; j++) {
+//                            Vect v = c.corner + Vect(j * sampleSize, i * sampleSize, ((z==0) ? 0 : sizeThreshold));
+//                            Particle p(v, 1.0, 0.1);
+//                            p.rho = wallRho;
+//                            p.pressure = wallPressure;
+//                            c.add(make_shared<Particle>(p));
+//                        }
+//                    }
+//                }
+
             }
         }
     }
@@ -69,7 +112,7 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
                 Cell c = cells[cell];
                 for (shared_ptr<Particle> p2: c.particles) {
                     double norm = (p->pos - p2->pos).norm();
-                    if (norm < l ) {
+                    if (norm < l && norm > 0) {
                         p->neighbours.insert(p2);
                     }
                 }
@@ -143,7 +186,7 @@ void Grid::update() {
             c.remove(p);
             remove(p);
         }
-        for(shared_ptr<Particle> p: cellRemove) {
+        for (shared_ptr<Particle> p: cellRemove) {
             c.remove(p);
         }
     }
