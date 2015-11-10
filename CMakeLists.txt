@@ -20,7 +20,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -std=c++11 -Wl,--no-as-needed")
 
-set(SOURCE_FILES main.cpp particle.cpp particle.h vect.cpp vect.h grid.cpp grid.h kernel.cpp kernel.h cell.cpp cell.h physics.cpp physics.hpp supp_functions.cpp supp_functions.hpp vizualisation.hpp vizualisation.cpp AnimateActors.h)
+set(SOURCE_FILES main.cpp particle.cpp particle.h vect.cpp vect.h grid.cpp grid.h kernel.cpp kernel.h cell.cpp cell.h physics.cpp physics.hpp supp_functions.cpp supp_functions.hpp vizualisation.hpp vizualisation.cpp AnimateActors.h hui.cpp hui.h)
 
 add_executable(INF555___Project ${SOURCE_FILES})
 

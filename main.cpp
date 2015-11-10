@@ -31,7 +31,8 @@ using namespace pcl;
 double viscosity = 0.00001;
 double rhoInitial = 1.0;
 
-double stiffness = 0.000001;
+//double stiffness = 0.000001;
+double stiffness = 10;
 
 const int number_cells = 20;
 const double path = 1.0 / (double)number_cells;
@@ -39,8 +40,11 @@ const double path = 1.0 / (double)number_cells;
 const  double kernelSmoothingLength = path; //0.1;
 const double lambda = 0.4;
 
+const double epsilon = 0.5;
+const double alpha = 0.5;
+
 //double timeStep = lambda * kernelSmoothingLength / (100.0);
-double timeStep = 0.005;
+double timeStep = 0.0001;
 
 #define PI 3.14
 
@@ -107,24 +111,93 @@ double computeNewRho(shared_ptr<Particle> p, Kernel &w, double timeStep) {
 Vect computePressureForce(shared_ptr<Particle> p, Kernel &w) {
     Vect result(0, 0, 0);
     
+    
+    
+    
     for (shared_ptr<Particle> n: p->neighbours) {
         result += w.grad(p->pos, n->pos) * ((p->pressure / (p->rho * p->rho) + n->pressure / (n->rho * n->rho)) * n->w);
     }
     
     
     // there is a minus here, so
-    result *=-1;
+    //result *=-1;
+    
+    return result;
+}
+
+Vect artificialViscosity(shared_ptr<Particle> p, Kernel &w)
+{
+    Vect result(0,0,0);
+    
+    for(shared_ptr<Particle> q : p->neighbours)
+    {
+        double norm = (q->pos - p->pos).norm();
+        Vect temp = (q->speed - p->speed);
+        temp *= w(norm) * q->w / q->rho;
+        result+= temp;
+    }
     
     return result;
 }
 
 
-
 const int scene_mode = 0;
-const int number_particles = 1000;
+const int number_particles = 500;
 const int window_size = 800;
 
+// ghost particles
+// * air particles around liquid
+// * solid paricles : correct the density summation,
 
+
+// surface sampling:
+// surface -> interior volume -> volume relaxation
+
+
+/*
+class Face
+{
+private:
+    double x0,y0,z0;
+    double dx,dy,dz;
+    Vect direction;
+public:
+    Face(double x0, double y0, double z0, double dx, double dy, double dz, Vect direction)
+    {
+        this->x0 = x0;
+        this->y0 = y0;
+        this->z0 = z0;
+        this->dx = dx;
+        this->dy = dy;
+        this->dz = dz;
+        this->direction = direction;
+    }
+    
+};
+
+class WallBoundary
+{
+    Face bottom,right,left,front,back;
+    
+    WallBoundary(double wallHeight,double wallWidth, double wallDepth, )
+    {
+
+    }
+    
+    int inside(shared_ptr<Particle> p)
+    {
+        
+    }
+    
+    double distance(Particle p)
+    {
+        
+    }
+
+};
+
+
+*/
 
 int main() {
     
@@ -232,9 +305,9 @@ int main() {
         
         // x,x are from 0.2 to 0.8
         // y is from 0 to 0.5
-        double x_phys = 0.2 + (double) ( rand() % 600 ) / 1000;
-        double y_phys = (double) ( rand() % 500 ) / 1000;
-        double z_phys = 0.2 + (double) ( rand() % 600 ) / 1000;
+        double x_phys = 0.3 + (double) ( rand() % 50 ) / 100;
+        double y_phys = 0.3 + (double) ( rand() % 100 ) / 1000;
+        double z_phys = 0.3 + (double) ( rand() % 50 ) / 100;
         
         shared_ptr<Particle> p = make_shared<Particle>(x_phys, y_phys, z_phys, mass_particle, particle_size);
         
@@ -348,7 +421,8 @@ int main() {
     
     renWin->Render();
     ren1->ResetCamera();
-    ren1->GetActiveCamera()->Dolly(.5);
+    ren1->GetActiveCamera()->Dolly(0.5);
+    ren1->GetActiveCamera()->SetObliqueAngles(45,95);
     ren1->ResetCameraClippingRange();
     // Create Cue observer.
     scene->Play();
@@ -404,12 +478,26 @@ int main() {
                 // ok
                 cout << "pressure"<< endl;
                 cout << pressureForce.x << " " <<pressureForce.y << " "<<pressureForce.z<<endl;
-                p->speed += pressureForce * timeStep;
+                p->speed -= pressureForce * timeStep;
                 cout << "final speed" << endl;
                 cout<< p->speed.x << " " << p->speed.y << " " << p->speed.z << endl;
                 
             }
            
+        }
+        
+        
+        // XSPH Artificial Viscosity
+        
+        for(shared_ptr<Particle> p: g.particles)
+        {
+            if(p->neighbours.size() != 0)
+            {
+                Vect artificialViscosityTerm = artificialViscosity(p, w);
+                
+                artificialViscosityTerm *= epsilon;
+                p->speed += artificialViscosityTerm;
+            }
         }
         
             
