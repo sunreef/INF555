@@ -69,7 +69,7 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
                 Cell c = cells[cell];
                 for (shared_ptr<Particle> p2: c.particles) {
                     double norm = (p->pos - p2->pos).norm();
-                    if (norm < l && norm > 0) {
+                    if (norm < l ) {
                         p->neighbours.insert(p2);
                     }
                 }
@@ -80,7 +80,7 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
 
 void Grid::update() {
 
-    double speedRatio = 0.8;
+    double speedRatio = 1.0;
 
     for (Cell c: cells) {
         vector<shared_ptr<Particle>> toRemove, cellRemove;
@@ -149,64 +149,64 @@ void Grid::update() {
     }
 }
 
-void Grid::update(shared_ptr<Particle> p) {
-
-    double speedRatio = 0.5;
-
-    p->pos += p->speed * timeStep;
-
-    if (p->pos.x < corner.x) {
-        p->pos.x = 2 * (corner.x) - p->pos.x;
-        p->speed.x *= -speedRatio;
-    }
-
-    if (p->pos.y < corner.y) {
-        p->pos.y = 2 * (corner.y) - p->pos.y;
-        p->speed.y *= -speedRatio;
-    }
-
-    if (p->pos.z < corner.z) {
-        p->pos.z = 2 * (corner.z) - p->pos.z;
-        p->speed.z *= -speedRatio;
-    }
-    double size = sizeThreshold * rows;
-
-    if (p->pos.x > corner.x + size) {
-        p->pos.x = 2 * (corner.x + size) - p->pos.x;
-        p->speed.x *= -speedRatio;
-    }
-
-    if (p->pos.y > corner.y + size) {
-        p->pos.y = 2 * (corner.y + size) - p->pos.y;
-        p->speed.y *= -speedRatio;
-    }
-
-    if (p->pos.z > corner.z + size) {
-        p->pos.z = 2 * (corner.z + size) - p->pos.z;
-        p->speed.z *= -speedRatio;
-    }
-
-    Vect v = p->pos;
-    int x = v.x / sizeThreshold;
-    int y = v.y / sizeThreshold;
-    int z = v.z / sizeThreshold;
-    if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
-        Cell c = cells[p->cellZ + rows * (p->cellY + rows * p->cellX)];
-        c.remove(p);
-        cout << p->pos.x << "  " << p->pos.y << "  " << p->pos.z << endl;
-        cout << "The particle is not inside the grid. It won't be inserted." << endl;
-        return;
-    }
-    if (x != p->cellX || y != p->cellY || z != p->cellZ) {
-        Cell c = cells[p->cellZ + rows * (p->cellY + rows * p->cellX)];
-        c.remove(p);
-        cells[z + rows * (y + rows * x)].add(p);
-
-        p->cellX = x;
-        p->cellY = y;
-        p->cellZ = z;
-    }
-}
+//void Grid::update(shared_ptr<Particle> p) {
+//
+//    double speedRatio = 0.5;
+//
+//    p->pos += p->speed * timeStep;
+//
+//    if (p->pos.x < corner.x) {
+//        p->pos.x = 2 * (corner.x) - p->pos.x;
+//        p->speed.x *= -speedRatio;
+//    }
+//
+//    if (p->pos.y < corner.y) {
+//        p->pos.y = 2 * (corner.y) - p->pos.y;
+//        p->speed.y *= -speedRatio;
+//    }
+//
+//    if (p->pos.z < corner.z) {
+//        p->pos.z = 2 * (corner.z) - p->pos.z;
+//        p->speed.z *= -speedRatio;
+//    }
+//    double size = sizeThreshold * rows;
+//
+//    if (p->pos.x > corner.x + size) {
+//        p->pos.x = 2 * (corner.x + size) - p->pos.x;
+//        p->speed.x *= -speedRatio;
+//    }
+//
+//    if (p->pos.y > corner.y + size) {
+//        p->pos.y = 2 * (corner.y + size) - p->pos.y;
+//        p->speed.y *= -speedRatio;
+//    }
+//
+//    if (p->pos.z > corner.z + size) {
+//        p->pos.z = 2 * (corner.z + size) - p->pos.z;
+//        p->speed.z *= -speedRatio;
+//    }
+//
+//    Vect v = p->pos;
+//    int x = v.x / sizeThreshold;
+//    int y = v.y / sizeThreshold;
+//    int z = v.z / sizeThreshold;
+//    if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
+//        Cell c = cells[p->cellZ + rows * (p->cellY + rows * p->cellX)];
+//        c.remove(p);
+//        cout << p->pos.x << "  " << p->pos.y << "  " << p->pos.z << endl;
+//        cout << "The particle is not inside the grid. It won't be inserted." << endl;
+//        return;
+//    }
+//    if (x != p->cellX || y != p->cellY || z != p->cellZ) {
+//        Cell c = cells[p->cellZ + rows * (p->cellY + rows * p->cellX)];
+//        c.remove(p);
+//        cells[z + rows * (y + rows * x)].add(p);
+//
+//        p->cellX = x;
+//        p->cellY = y;
+//        p->cellZ = z;
+//    }
+//}
 
 void Grid::remove(shared_ptr<Particle> p) {
     for (vector<shared_ptr<Particle>>::iterator it = particles.begin(); it != particles.end(); it++) {
