@@ -26,11 +26,13 @@ Grid::~Grid() {
 }
 
 bool Grid::insert(shared_ptr<Particle> p) {
+    
     Vect v = p->pos - corner;
 
     int x = v.x / sizeThreshold;
     int y = v.y / sizeThreshold;
     int z = v.z / sizeThreshold;
+    
 
     if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
         cout << x << ", " << y << ", " << z << endl;
@@ -59,12 +61,18 @@ int Grid::getNumberOfParticles() {
 
 
 void Grid::neighbours(shared_ptr<Particle> &p, double l) {
-    l *= l;
+   // l *= l;
+    
     for (int x = max(0, p->cellX - 1); x <= min(rows - 1, p->cellX + 1); x++) {
+        
         for (int y = max(0, p->cellY - 1); y <= min(rows - 1, p->cellY + 1); y++) {
+            
             for (int z = max(0, p->cellZ - 1); z <= min(rows - 1, p->cellZ + 1); z++) {
+                
                 int cell = z + rows * (y + rows * x);
+                
                 Cell c = getCell(cell);
+                
                 if (c.particles.size() == 0) {
                     continue;
                 }
@@ -85,6 +93,7 @@ void Grid::update(shared_ptr<Particle> p) {
 
 
     p->pos += p->speed * timeStep;
+    
 
     if (p->pos.x < corner.x) {
         p->pos.x += 2 * (corner.x - p->pos.x);
@@ -100,6 +109,7 @@ void Grid::update(shared_ptr<Particle> p) {
         p->pos.z += 2 * (corner.z - p->pos.z);
         p->speed.z *= -1;
     }
+    
     double size = sizeThreshold * rows;
 
     if (p->pos.x > corner.x + size) {
@@ -117,6 +127,8 @@ void Grid::update(shared_ptr<Particle> p) {
         p->speed.z *= -1;
     }
 
+    
+    
     Vect v = p->pos;
     int x = v.x / sizeThreshold;
     int y = v.y / sizeThreshold;
@@ -149,7 +161,7 @@ shared_ptr<Particle> Grid::getParticle(int i) {
 }
 
 
-void parallelNeighbourSearch(Grid &g, vector<shared_ptr<Particle>> &particles, int &count,
+void parallelNeighbourSearch(Grid &g, vector<shared_ptr<Particle> > &particles, int &count,
                              double l, int id) {
     bool loop = true;
     while (loop) {

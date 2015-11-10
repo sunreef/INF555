@@ -20,11 +20,11 @@ public:
     Vect pos;
     Vect speed;
     double w;
-    double r;
+    double r; // radius
     double rho;
     double pressure;
-    int cellX, cellY, cellZ;
-    set<shared_ptr<Particle>> neighbours;
+    int cellX, cellY, cellZ; // Corner Coordinates of Cell?
+    set<shared_ptr<Particle> > neighbours;
 
     Particle(double x, double y, double z, double weight, double radius);
 

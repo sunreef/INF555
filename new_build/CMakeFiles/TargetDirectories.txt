@@ -1,0 +1,3 @@
+/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/INF555___Project.dir
+/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/ALL_BUILD.dir
+/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/ZERO_CHECK.dir

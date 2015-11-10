@@ -16,14 +16,14 @@ using namespace std;
 
 class Grid {
 public:
-    double sizeThreshold = 0.4;
+    double sizeThreshold = 0.4; // physical size of each Cell
     double timeStep;
 
     Vect corner;
     int numberOfParticles;
     vector<Cell> cells;
 
-    vector<shared_ptr<Particle>> particles;
+    vector<shared_ptr<Particle> > particles;
 
 
     Grid(Vect c, int r, double thresh, double time);

@@ -42,6 +42,8 @@ Vect Kernel::grad(Vect pi, Vect pj, double norm) {
     if (q >= 0) {
         temp = -3.0 / (4.0 * M_PI) * pow(2 - q, 2);
     }
-
+    
+    
+    // pechu
     return Vect((pi.x > pj.x) ? 1 : -1, (pi.y > pj.y) ? 1 : -1, (pi.z > pi.z) ? 1 : -1) * temp;
 }

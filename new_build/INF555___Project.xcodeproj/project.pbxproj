@@ -1,0 +1,1897 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		692818CA78AF46AFB755DE2F /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 04B9A3B2E2054A0DA0118A4D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				7E168C5D962D411084CF30BE /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		6E0C221FC32F4E389B1ECEB2 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 20774882ECC2446EAA30F1DC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				D53D53009F1044BEA5A36C3E /* CMake Rules */,
+			);
+			dependencies = (
+				1D7389CF2A26466ABB9F945D /* PBXTargetDependency */,
+				892789DD395547A3A45D4FCE /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		3BA584BE1DBC4DCD8C044E04 /* cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 251A68C52C174E6CA7EEE9DA /* cell.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		4C280B581D114C54A250858C /* kernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ECAA9BEFCFFF4C0997A86F57 /* kernel.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		509AF13E796D45078043CC5B /* grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DF10C551F00494B8FCDBD83 /* grid.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		869C544A1BEEA55900214B7C /* physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 869C54481BEEA55900214B7C /* physics.cpp */; settings = {ASSET_TAGS = (); }; };
+		999DB369F537402F927014F7 /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEC63F51159D41F1932974BA /* particle.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		BE05BA50C3674D3BB1FD4BD8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E04142371C34DE5929BF940 /* main.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		F227B0D4BB0A4E67B68B09DC /* vect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B509BAF9662941A2931A84DD /* vect.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03E07C35C612429080A033D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F80D0AD9CDD4F82B84FA06D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 692818CA78AF46AFB755DE2F;
+			remoteInfo = ZERO_CHECK;
+		};
+		0CFB88A8CC2C48598888D8C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F80D0AD9CDD4F82B84FA06D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A75011978CEA4BD08B3B0B9D;
+			remoteInfo = "INF555___Project";
+		};
+		AAF23C6F51CE45C59ECC1F71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F80D0AD9CDD4F82B84FA06D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 692818CA78AF46AFB755DE2F;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		251A68C52C174E6CA7EEE9DA /* cell.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = cell.cpp; sourceTree = SOURCE_ROOT; };
+		38E8FDD61D614A3BA8D00513 /* kernel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = kernel.h; sourceTree = SOURCE_ROOT; };
+		3E04142371C34DE5929BF940 /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		5DF10C551F00494B8FCDBD83 /* grid.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = grid.cpp; sourceTree = SOURCE_ROOT; };
+		664F296200E44833840D3564 /* cell.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = cell.h; sourceTree = SOURCE_ROOT; };
+		67CDFB661E134B60BFB05D6C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		869C54481BEEA55900214B7C /* physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = physics.cpp; sourceTree = "<group>"; };
+		869C54491BEEA55900214B7C /* physics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = physics.hpp; sourceTree = "<group>"; };
+		89A17E09FB944D08BD435005 /* grid.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = grid.h; sourceTree = SOURCE_ROOT; };
+		97BC4629E71E415282C2ADAF /* INF555___Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "INF555___Project"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A83DC3944FBB4395AE0C76B9 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		AB0D251609E64F76AD13769A /* particle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = particle.h; sourceTree = SOURCE_ROOT; };
+		B509BAF9662941A2931A84DD /* vect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = vect.cpp; sourceTree = SOURCE_ROOT; };
+		DEC63F51159D41F1932974BA /* particle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = particle.cpp; sourceTree = SOURCE_ROOT; };
+		E27F9515157E41EABAD17427 /* vect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = vect.h; sourceTree = SOURCE_ROOT; };
+		E8EFFD4C0390488C99DFE3D9 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		ECAA9BEFCFFF4C0997A86F57 /* kernel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = kernel.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		101812FF97D24173BF908446 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		39DD338A9863455DBAD6CF53 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				602F56BF39A743089B9CA79F /* CMake Rules */,
+				E8EFFD4C0390488C99DFE3D9 /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		5B5D82D95197446EAFF34570 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				664F296200E44833840D3564 /* cell.h */,
+				89A17E09FB944D08BD435005 /* grid.h */,
+				38E8FDD61D614A3BA8D00513 /* kernel.h */,
+				AB0D251609E64F76AD13769A /* particle.h */,
+				E27F9515157E41EABAD17427 /* vect.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		5C535621E28A4102AC51151B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97BC4629E71E415282C2ADAF /* INF555___Project */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		602F56BF39A743089B9CA79F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		679FF084284F4F42974C0FA6 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		6EEA047A622146E489D73BDF /* INF555___Project */ = {
+			isa = PBXGroup;
+			children = (
+				9D5D8C4A18E844B0B56109AF /* Source Files */,
+				5B5D82D95197446EAFF34570 /* Header Files */,
+				67CDFB661E134B60BFB05D6C /* CMakeLists.txt */,
+			);
+			name = "INF555___Project";
+			sourceTree = "<group>";
+		};
+		9D5D8C4A18E844B0B56109AF /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				251A68C52C174E6CA7EEE9DA /* cell.cpp */,
+				5DF10C551F00494B8FCDBD83 /* grid.cpp */,
+				ECAA9BEFCFFF4C0997A86F57 /* kernel.cpp */,
+				3E04142371C34DE5929BF940 /* main.cpp */,
+				DEC63F51159D41F1932974BA /* particle.cpp */,
+				B509BAF9662941A2931A84DD /* vect.cpp */,
+				869C54481BEEA55900214B7C /* physics.cpp */,
+				869C54491BEEA55900214B7C /* physics.hpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D77C80E75CF84D88AFB837B8 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				679FF084284F4F42974C0FA6 /* CMake Rules */,
+				A83DC3944FBB4395AE0C76B9 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F3780D67C4CD45D9B1542617 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6EEA047A622146E489D73BDF /* INF555___Project */,
+				D77C80E75CF84D88AFB837B8 /* ALL_BUILD */,
+				39DD338A9863455DBAD6CF53 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		FD70D01CDCEA483696C6A703 = {
+			isa = PBXGroup;
+			children = (
+				F3780D67C4CD45D9B1542617 /* Sources */,
+				101812FF97D24173BF908446 /* Resources */,
+				5C535621E28A4102AC51151B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A75011978CEA4BD08B3B0B9D /* INF555___Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60366C0710394B7AAE68E521 /* Build configuration list for PBXNativeTarget "INF555___Project" */;
+			buildPhases = (
+				9EE8F99E1464417C8873CABD /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0C15C0A652149E3A10D5759 /* PBXTargetDependency */,
+			);
+			name = "INF555___Project";
+			productName = "INF555___Project";
+			productReference = 97BC4629E71E415282C2ADAF /* INF555___Project */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F80D0AD9CDD4F82B84FA06D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 9CFD2E76C0DA4F73BF4006EA /* Build configuration list for PBXProject "INF555___Project" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FD70D01CDCEA483696C6A703;
+			projectDirPath = ..;
+			projectRoot = "";
+			targets = (
+				6E0C221FC32F4E389B1ECEB2 /* ALL_BUILD */,
+				A75011978CEA4BD08B3B0B9D /* INF555___Project */,
+				692818CA78AF46AFB755DE2F /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E168C5D962D411084CF30BE /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build -f /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		D53D53009F1044BEA5A36C3E /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build -f /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EE8F99E1464417C8873CABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA584BE1DBC4DCD8C044E04 /* cell.cpp in Sources */,
+				509AF13E796D45078043CC5B /* grid.cpp in Sources */,
+				4C280B581D114C54A250858C /* kernel.cpp in Sources */,
+				869C544A1BEEA55900214B7C /* physics.cpp in Sources */,
+				BE05BA50C3674D3BB1FD4BD8 /* main.cpp in Sources */,
+				999DB369F537402F927014F7 /* particle.cpp in Sources */,
+				F227B0D4BB0A4E67B68B09DC /* vect.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D7389CF2A26466ABB9F945D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A75011978CEA4BD08B3B0B9D /* INF555___Project */;
+			targetProxy = 0CFB88A8CC2C48598888D8C6 /* PBXContainerItemProxy */;
+		};
+		892789DD395547A3A45D4FCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 692818CA78AF46AFB755DE2F /* ZERO_CHECK */;
+			targetProxy = 03E07C35C612429080A033D6 /* PBXContainerItemProxy */;
+		};
+		B0C15C0A652149E3A10D5759 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 692818CA78AF46AFB755DE2F /* ZERO_CHECK */;
+			targetProxy = AAF23C6F51CE45C59ECC1F71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DA4A902876C460BAA1E7C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/build;
+			};
+			name = Release;
+		};
+		365C161096044D24A1602C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		42500FDD255D4329AEA8E551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/bin/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/qt/4.8.6/lib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "      ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pthread",
+					"-std=c++11",
+					"-Wl,--no-as-needed",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/lib/libxml2.dylib,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					"/usr/local/lib/libvtkDomainsChemistry-6.1.1.dylib",
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersFlowPaths-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneric-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHyperTree-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallelImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersProgrammable-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSelection-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSMP-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersVerdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkverdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtksqlite-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtWebkit-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMorphological-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStencil-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisBoostGraphAlgorithms-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOEnSight-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExodus-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExport-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingGL2PS-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImport-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOInfovis-6.1.1.dylib",
+					/usr/lib/libxml2.dylib,
+					"/usr/local/lib/libvtkIOLSDyna-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMINC-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMovie-6.1.1.dylib",
+					"/usr/local/lib/libvtkoggtheora-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOPLY-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOVideo-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkRenderingFreeTypeFontConfig-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeTypeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLIC-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLOD-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsGeovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingPython27Core-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libvtkgl2ps-6.1.1.dylib",
+					/usr/local/lib/libpng.dylib,
+					"/usr/local/lib/libvtkexoIIc-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIONetCDF-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF_cxx-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF-6.1.1.dylib",
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersTexture-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQt-6.1.1.dylib",
+					"-framework",
+					QtGui,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtCore,
+					"/usr/local/lib/libvtkFiltersAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkParallelCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOLegacy-6.1.1.dylib",
+					"/usr/local/lib/libvtkGeovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXML-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkjsoncpp-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXMLParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkproj4-6.1.1.dylib",
+					"-lm",
+					"/usr/local/lib/libvtkViewsInfovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkChartsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingOpenGL-6.1.1.dylib",
+					"-framework",
+					AGL,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					Cocoa,
+					"/usr/local/lib/libvtkFiltersImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisLayout-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionWidgets-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkDICOMParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkmetaio-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersModeling-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionStyle-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingAnnotation-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolume-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLabel-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeType-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersExtraction-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkalglib-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingFourier-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonExecutionModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonComputationalGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonDataModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMisc-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonTransforms-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonSystem-6.1.1.dylib",
+					"/usr/local/lib/libvtkftgl-6.1.1.dylib",
+					"/usr/local/lib/libvtkfreetype-6.1.1.dylib",
+					/usr/lib/libz.dylib,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					CoreServices,
+					"-framework",
+					OpenGL,
+					"/usr/local/lib/libvtkCommonCore-6.1.1.dylib",
+					"/usr/local/lib/libvtksys-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "INF555___Project";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		4AEA2CFC12F84352B82AD8E2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		4B85D6AC1358453EB0946177 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/qt/4.8.6/lib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "         -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pthread",
+					"-std=c++11",
+					"-Wl,--no-as-needed",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/lib/libxml2.dylib,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					"/usr/local/lib/libvtkDomainsChemistry-6.1.1.dylib",
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersFlowPaths-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneric-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHyperTree-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallelImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersProgrammable-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSelection-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSMP-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersVerdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkverdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtksqlite-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtWebkit-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMorphological-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStencil-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisBoostGraphAlgorithms-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOEnSight-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExodus-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExport-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingGL2PS-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImport-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOInfovis-6.1.1.dylib",
+					/usr/lib/libxml2.dylib,
+					"/usr/local/lib/libvtkIOLSDyna-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMINC-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMovie-6.1.1.dylib",
+					"/usr/local/lib/libvtkoggtheora-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOPLY-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOVideo-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkRenderingFreeTypeFontConfig-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeTypeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLIC-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLOD-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsGeovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingPython27Core-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libvtkgl2ps-6.1.1.dylib",
+					/usr/local/lib/libpng.dylib,
+					"/usr/local/lib/libvtkexoIIc-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIONetCDF-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF_cxx-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF-6.1.1.dylib",
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersTexture-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQt-6.1.1.dylib",
+					"-framework",
+					QtGui,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtCore,
+					"/usr/local/lib/libvtkFiltersAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkParallelCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOLegacy-6.1.1.dylib",
+					"/usr/local/lib/libvtkGeovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXML-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkjsoncpp-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXMLParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkproj4-6.1.1.dylib",
+					"-lm",
+					"/usr/local/lib/libvtkViewsInfovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkChartsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingOpenGL-6.1.1.dylib",
+					"-framework",
+					AGL,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					Cocoa,
+					"/usr/local/lib/libvtkFiltersImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisLayout-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionWidgets-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkDICOMParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkmetaio-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersModeling-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionStyle-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingAnnotation-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolume-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLabel-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeType-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersExtraction-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkalglib-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingFourier-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonExecutionModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonComputationalGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonDataModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMisc-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonTransforms-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonSystem-6.1.1.dylib",
+					"/usr/local/lib/libvtkftgl-6.1.1.dylib",
+					"/usr/local/lib/libvtkfreetype-6.1.1.dylib",
+					/usr/lib/libz.dylib,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					CoreServices,
+					"-framework",
+					OpenGL,
+					"/usr/local/lib/libvtkCommonCore-6.1.1.dylib",
+					"/usr/local/lib/libvtksys-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "INF555___Project";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		75980DCD2F7B40C6B902B3D4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		77973E621C5D4963A8C8935B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		891225096C5C47658EA7F68C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		A3D951BDF2084D8DA02EFADC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/build;
+			};
+			name = MinSizeRel;
+		};
+		AE1BAF8310B04FE48B692963 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/bin/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/qt/4.8.6/lib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "      -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pthread",
+					"-std=c++11",
+					"-Wl,--no-as-needed",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/lib/libxml2.dylib,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					"/usr/local/lib/libvtkDomainsChemistry-6.1.1.dylib",
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersFlowPaths-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneric-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHyperTree-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallelImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersProgrammable-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSelection-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSMP-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersVerdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkverdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtksqlite-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtWebkit-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMorphological-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStencil-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisBoostGraphAlgorithms-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOEnSight-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExodus-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExport-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingGL2PS-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImport-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOInfovis-6.1.1.dylib",
+					/usr/lib/libxml2.dylib,
+					"/usr/local/lib/libvtkIOLSDyna-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMINC-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMovie-6.1.1.dylib",
+					"/usr/local/lib/libvtkoggtheora-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOPLY-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOVideo-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkRenderingFreeTypeFontConfig-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeTypeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLIC-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLOD-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsGeovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingPython27Core-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libvtkgl2ps-6.1.1.dylib",
+					/usr/local/lib/libpng.dylib,
+					"/usr/local/lib/libvtkexoIIc-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIONetCDF-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF_cxx-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF-6.1.1.dylib",
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersTexture-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQt-6.1.1.dylib",
+					"-framework",
+					QtGui,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtCore,
+					"/usr/local/lib/libvtkFiltersAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkParallelCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOLegacy-6.1.1.dylib",
+					"/usr/local/lib/libvtkGeovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXML-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkjsoncpp-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXMLParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkproj4-6.1.1.dylib",
+					"-lm",
+					"/usr/local/lib/libvtkViewsInfovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkChartsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingOpenGL-6.1.1.dylib",
+					"-framework",
+					AGL,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					Cocoa,
+					"/usr/local/lib/libvtkFiltersImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisLayout-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionWidgets-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkDICOMParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkmetaio-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersModeling-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionStyle-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingAnnotation-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolume-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLabel-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeType-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersExtraction-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkalglib-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingFourier-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonExecutionModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonComputationalGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonDataModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMisc-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonTransforms-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonSystem-6.1.1.dylib",
+					"/usr/local/lib/libvtkftgl-6.1.1.dylib",
+					"/usr/local/lib/libvtkfreetype-6.1.1.dylib",
+					/usr/lib/libz.dylib,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					CoreServices,
+					"-framework",
+					OpenGL,
+					"/usr/local/lib/libvtkCommonCore-6.1.1.dylib",
+					"/usr/local/lib/libvtksys-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "INF555___Project";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		B8CB279D991E412495685DDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		BE23E729C02B4B40AFD0C4D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		C9F9C7A8ED9D465ABFB3B70F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		CB5FC133741042F89FB81B73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = "  ";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		E80C7CB6561C4BE9ABEBAC05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/build;
+			};
+			name = Debug;
+		};
+		F40F2364299D4B97B0713962 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /usr/local/Cellar/qt/4.8.6/lib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					DISABLE_OPENNI,
+					DISABLE_OPENNI2,
+					DISABLE_PCAP,
+					DISABLE_PNG,
+					"'vtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)'",
+					"'vtkRenderingFreeType_AUTOINIT=1(vtkRenderingFreeTypeFontConfig)'",
+					"'vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)'",
+					EIGEN_USE_NEW_STDVECTOR,
+					EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET,
+					FLANN_STATIC,
+					qh_QHpointer,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include/vtk-6.1",
+					/usr/local/include,
+					/usr/include/libxml2,
+					/usr/include/python2.7,
+					"/usr/local/include/pcl-1.7",
+					/usr/local/include/eigen3,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "      -DNDEBUG  ";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pthread",
+					"-std=c++11",
+					"-Wl,--no-as-needed",
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/lib/libxml2.dylib,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_filesystem-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_iostreams-mt.dylib",
+					"/usr/local/lib/libboost_serialization-mt.dylib",
+					"/usr/local/lib/libboost_chrono-mt.dylib",
+					/usr/local/lib/libqhull_p.dylib,
+					/usr/local/lib/libflann_cpp_s.a,
+					/usr/lib/libz.dylib,
+					/usr/local/lib/libjpeg.dylib,
+					/usr/local/lib/libpng.dylib,
+					/usr/local/lib/libtiff.dylib,
+					"/usr/local/lib/libvtkDomainsChemistry-6.1.1.dylib",
+					/usr/lib/libexpat.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersFlowPaths-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneric-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHyperTree-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallelImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersProgrammable-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSelection-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSMP-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersVerdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkverdict-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOSQL-6.1.1.dylib",
+					"/usr/local/lib/libvtksqlite-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQtWebkit-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingMorphological-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingStencil-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisBoostGraphAlgorithms-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOEnSight-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExodus-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOExport-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingGL2PS-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImport-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOInfovis-6.1.1.dylib",
+					/usr/lib/libxml2.dylib,
+					"/usr/local/lib/libvtkIOLSDyna-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMINC-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOMovie-6.1.1.dylib",
+					"/usr/local/lib/libvtkoggtheora-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOPLY-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOVideo-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+					"/usr/local/lib/libvtkRenderingFreeTypeFontConfig-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeTypeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLIC-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLOD-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingQt-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolumeOpenGL-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsGeovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingPython27Core-6.1.1.dylib",
+					"/usr/local/lib/libvtkWrappingTools-6.1.a",
+					/usr/local/lib/libpcl_common.dylib,
+					/usr/local/lib/libpcl_octree.dylib,
+					/usr/local/lib/libpcl_io.dylib,
+					/usr/local/lib/libpcl_kdtree.dylib,
+					/usr/local/lib/libpcl_search.dylib,
+					/usr/local/lib/libpcl_sample_consensus.dylib,
+					/usr/local/lib/libpcl_filters.dylib,
+					/usr/local/lib/libpcl_features.dylib,
+					/usr/local/lib/libpcl_segmentation.dylib,
+					/usr/local/lib/libpcl_visualization.dylib,
+					/usr/local/lib/libpcl_surface.dylib,
+					/usr/local/lib/libpcl_registration.dylib,
+					/usr/local/lib/libpcl_keypoints.dylib,
+					/usr/local/lib/libpcl_tracking.dylib,
+					/usr/local/lib/libpcl_recognition.dylib,
+					/usr/local/lib/libpcl_outofcore.dylib,
+					/usr/local/lib/libpcl_people.dylib,
+					"/usr/local/lib/libvtkgl2ps-6.1.1.dylib",
+					/usr/local/lib/libpng.dylib,
+					"/usr/local/lib/libvtkexoIIc-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersParallel-6.1.1.dylib",
+					"/usr/local/lib/libvtkIONetCDF-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF_cxx-6.1.1.dylib",
+					"/usr/local/lib/libvtkNetCDF-6.1.1.dylib",
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					/usr/local/lib/libhdf5.dylib,
+					/usr/local/lib/libsz.dylib,
+					/usr/lib/libdl.dylib,
+					/usr/lib/libm.dylib,
+					/usr/local/lib/libhdf5_hl.dylib,
+					"/usr/local/lib/libvtkFiltersTexture-6.1.1.dylib",
+					"/usr/local/lib/libvtkGUISupportQt-6.1.1.dylib",
+					"-framework",
+					QtGui,
+					"-framework",
+					QtNetwork,
+					"-framework",
+					QtCore,
+					"/usr/local/lib/libvtkFiltersAMR-6.1.1.dylib",
+					"/usr/local/lib/libvtkParallelCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOLegacy-6.1.1.dylib",
+					"/usr/local/lib/libvtkGeovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXML-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkjsoncpp-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOXMLParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkproj4-6.1.1.dylib",
+					"-lm",
+					"/usr/local/lib/libvtkViewsInfovis-6.1.1.dylib",
+					"/usr/local/lib/libvtkChartsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingContext2D-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingOpenGL-6.1.1.dylib",
+					"-framework",
+					AGL,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					Cocoa,
+					"/usr/local/lib/libvtkFiltersImaging-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisLayout-6.1.1.dylib",
+					"/usr/local/lib/libvtkInfovisCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkViewsCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionWidgets-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOImage-6.1.1.dylib",
+					"/usr/local/lib/libvtkDICOMParser-6.1.1.dylib",
+					"/usr/local/lib/libvtkIOCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkmetaio-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersHybrid-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersModeling-6.1.1.dylib",
+					"/usr/local/lib/libvtkInteractionStyle-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingAnnotation-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingColor-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingVolume-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingLabel-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingFreeType-6.1.1.dylib",
+					"/usr/local/lib/libvtkRenderingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersExtraction-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersStatistics-6.1.1.dylib",
+					"/usr/local/lib/libvtkalglib-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingFourier-6.1.1.dylib",
+					"/usr/local/lib/libvtkImagingCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersSources-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersGeneral-6.1.1.dylib",
+					"/usr/local/lib/libvtkFiltersCore-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonExecutionModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonComputationalGeometry-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonDataModel-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMisc-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonTransforms-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonMath-6.1.1.dylib",
+					"/usr/local/lib/libvtkCommonSystem-6.1.1.dylib",
+					"/usr/local/lib/libvtkftgl-6.1.1.dylib",
+					"/usr/local/lib/libvtkfreetype-6.1.1.dylib",
+					/usr/lib/libz.dylib,
+					"-framework",
+					ApplicationServices,
+					"-framework",
+					CoreServices,
+					"-framework",
+					OpenGL,
+					"/usr/local/lib/libvtkCommonCore-6.1.1.dylib",
+					"/usr/local/lib/libvtksys-6.1.1.dylib",
+					/System/Library/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "INF555___Project";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04B9A3B2E2054A0DA0118A4D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				365C161096044D24A1602C5A /* Debug */,
+				CB5FC133741042F89FB81B73 /* Release */,
+				C9F9C7A8ED9D465ABFB3B70F /* MinSizeRel */,
+				4AEA2CFC12F84352B82AD8E2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		20774882ECC2446EAA30F1DC /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE23E729C02B4B40AFD0C4D0 /* Debug */,
+				B8CB279D991E412495685DDA /* Release */,
+				77973E621C5D4963A8C8935B /* MinSizeRel */,
+				891225096C5C47658EA7F68C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		60366C0710394B7AAE68E521 /* Build configuration list for PBXNativeTarget "INF555___Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42500FDD255D4329AEA8E551 /* Debug */,
+				AE1BAF8310B04FE48B692963 /* Release */,
+				F40F2364299D4B97B0713962 /* MinSizeRel */,
+				4B85D6AC1358453EB0946177 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9CFD2E76C0DA4F73BF4006EA /* Build configuration list for PBXProject "INF555___Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E80C7CB6561C4BE9ABEBAC05 /* Debug */,
+				1DA4A902876C460BAA1E7C57 /* Release */,
+				A3D951BDF2084D8DA02EFADC /* MinSizeRel */,
+				75980DCD2F7B40C6B902B3D4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F80D0AD9CDD4F82B84FA06D /* Project object */;
+}

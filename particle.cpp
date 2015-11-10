@@ -11,7 +11,7 @@ Particle::Particle(double x, double y, double z, double weight, double radius) :
                                                                                  speed(0, 0, 0), id(particlesCount),
                                                                                  cellX(0), cellZ(0), cellY(0) {
     particlesCount++;
-    neighbours = set<shared_ptr<Particle>>();
+    neighbours = set< shared_ptr<Particle> >();
 }
 
 void Particle::print() const {
@@ -23,5 +23,5 @@ void Particle::print() const {
 Particle::Particle(Vect &p, double weight, double radius) : pos(p), w(weight), r(radius), speed(0, 0, 0),
                                                             id(particlesCount), cellX(0), cellZ(0), cellY(0) {
     particlesCount++;
-    neighbours = set<shared_ptr<Particle>>();
+    neighbours = set< shared_ptr<Particle> >();
 }

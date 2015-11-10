@@ -16,7 +16,7 @@ struct Cell {
     double size;
     Vect corner;
 
-    vector<shared_ptr<Particle>> particles;
+    vector<shared_ptr<Particle> > particles;
     int particlesCount;
 
     Cell();

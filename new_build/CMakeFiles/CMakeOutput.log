@@ -1,0 +1,400 @@
+The system is: Darwin - 14.5.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+=== BUILD TARGET CompilerIdC OF PROJECT CompilerIdC WITH THE DEFAULT CONFIGURATION (Debug) ===
+
+Check dependencies
+
+Write auxiliary files
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CompilerIdC.LinkFileList
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+chmod 0755 /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+
+CompileC CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o CMakeCCompilerId.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -fvisibility=hidden -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/i386 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.dia -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CMakeCCompilerId.c -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o
+
+Ld CompilerIdC normal i386
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CompilerIdC.LinkFileList -mmacosx-version-min=10.11 -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CompilerIdC_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC
+
+PhaseScriptExecution Run\ Script CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC
+    /bin/sh -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+
+** BUILD SUCCEEDED **
+
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC"
+
+The C compiler identification is AppleClang, found in "/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdC/CompilerIdC"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+=== BUILD TARGET CompilerIdCXX OF PROJECT CompilerIdCXX WITH THE DEFAULT CONFIGURATION (Debug) ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386/CompilerIdCXX.LinkFileList
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+chmod 0755 /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap
+
+CompileC CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386/CMakeCXXCompilerId.o CMakeCXXCompilerId.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.11 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/i386 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386/CMakeCXXCompilerId.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386/CMakeCXXCompilerId.dia -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CMakeCXXCompilerId.cpp -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386/CMakeCXXCompilerId.o
+
+Ld CompilerIdCXX normal i386
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386/CompilerIdCXX.LinkFileList -mmacosx-version-min=10.11 -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/i386/CompilerIdCXX_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX
+
+PhaseScriptExecution Run\ Script CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX
+    /bin/sh -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+
+** BUILD SUCCEEDED **
+
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX"
+
+The CXX compiler identification is AppleClang, found in "/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/3.1.2/CompilerIdCXX/CompilerIdCXX"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec373255653" "-configuration" "Debug"
+=== BUILD TARGET cmTryCompileExec373255653 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64/cmTryCompileExec373255653.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64/testCCompiler.o testCCompiler.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64/testCCompiler.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64/testCCompiler.dia -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/testCCompiler.c -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64/testCCompiler.o
+
+Ld Debug/cmTryCompileExec373255653 normal x86_64
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64/cmTryCompileExec373255653.LinkFileList -mmacosx-version-min=10.11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec373255653.build/Objects-normal/x86_64/cmTryCompileExec373255653_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec373255653
+
+** BUILD SUCCEEDED **
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec2715025563" "-configuration" "Debug"
+=== BUILD TARGET cmTryCompileExec2715025563 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCCompilerABI.c -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.o
+
+Ld Debug/cmTryCompileExec2715025563 normal x86_64
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList -mmacosx-version-min=10.11 -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2715025563
+Apple LLVM version 7.0.0 (clang-700.0.72)
+Target: x86_64-apple-darwin14.5.0
+Thread model: posix
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2715025563 -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug
+@(#)PROGRAM:ld  PROJECT:ld64-253.3
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib
+Framework search paths:
+	/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/
+
+** BUILD SUCCEEDED **
+
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec2715025563" "-configuration" "Debug"]
+  ignore line: [=== BUILD TARGET cmTryCompileExec2715025563 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===]
+  ignore line: []
+  ignore line: [Check dependencies]
+  ignore line: []
+  ignore line: [Write auxiliary files]
+  ignore line: [/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64]
+  ignore line: [write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList]
+  ignore line: []
+  ignore line: [CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler]
+  ignore line: [    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp]
+  ignore line: [    export LANG=en_US.US-ASCII]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCCompilerABI.c -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/CMakeCCompilerABI.o]
+  ignore line: []
+  ignore line: [Ld Debug/cmTryCompileExec2715025563 normal x86_64]
+  ignore line: [    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp]
+  ignore line: [    export MACOSX_DEPLOYMENT_TARGET=10.11]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList -mmacosx-version-min=10.11 -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2715025563]
+  ignore line: [Apple LLVM version 7.0.0 (clang-700.0.72)]
+  ignore line: [Target: x86_64-apple-darwin14.5.0]
+  ignore line: [Thread model: posix]
+  reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2715025563 -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug]
+            to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2715025563 -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a ]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2715025563 -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a ]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.11.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec2715025563] ==> ignore
+    arg [-filelist] ==> ignore
+    arg [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563.LinkFileList] ==> ignore
+    arg [-v] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-dependency_info] ==> ignore
+    arg [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec2715025563.build/Objects-normal/x86_64/cmTryCompileExec2715025563_dependency_info.dat] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib]
+  Framework search paths: [;/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  collapse lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib]
+  collapse framework dir [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks]
+  implicit libs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a]
+  implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks]
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec1054307136" "-configuration" "Debug"
+=== BUILD TARGET cmTryCompileExec1054307136 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64/cmTryCompileExec1054307136.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64/testCXXCompiler.o testCXXCompiler.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.11 -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -g -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64/testCXXCompiler.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64/testCXXCompiler.dia -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64/testCXXCompiler.o
+
+Ld Debug/cmTryCompileExec1054307136 normal x86_64
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64/cmTryCompileExec1054307136.LinkFileList -mmacosx-version-min=10.11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1054307136.build/Objects-normal/x86_64/cmTryCompileExec1054307136_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1054307136
+
+** BUILD SUCCEEDED **
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec1011262778" "-configuration" "Debug"
+=== BUILD TARGET cmTryCompileExec1011262778 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.11 -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -g -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCXXCompilerABI.cpp -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o
+
+Ld Debug/cmTryCompileExec1011262778 normal x86_64
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList -mmacosx-version-min=10.11 -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1011262778
+Apple LLVM version 7.0.0 (clang-700.0.72)
+Target: x86_64-apple-darwin14.5.0
+Thread model: posix
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1011262778 -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug
+@(#)PROGRAM:ld  PROJECT:ld64-253.3
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib
+Framework search paths:
+	/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/
+
+** BUILD SUCCEEDED **
+
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec1011262778" "-configuration" "Debug"]
+  ignore line: [=== BUILD TARGET cmTryCompileExec1011262778 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===]
+  ignore line: []
+  ignore line: [Check dependencies]
+  ignore line: []
+  ignore line: [Write auxiliary files]
+  ignore line: [/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64]
+  ignore line: [write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList]
+  ignore line: []
+  ignore line: [CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler]
+  ignore line: [    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp]
+  ignore line: [    export LANG=en_US.US-ASCII]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.11 -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -g -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /Applications/CMake.app/Contents/share/cmake-3.1/Modules/CMakeCXXCompilerABI.cpp -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o]
+  ignore line: []
+  ignore line: [Ld Debug/cmTryCompileExec1011262778 normal x86_64]
+  ignore line: [    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp]
+  ignore line: [    export MACOSX_DEPLOYMENT_TARGET=10.11]
+  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList -mmacosx-version-min=10.11 -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1011262778]
+  ignore line: [Apple LLVM version 7.0.0 (clang-700.0.72)]
+  ignore line: [Target: x86_64-apple-darwin14.5.0]
+  ignore line: [Thread model: posix]
+  reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1011262778 -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug]
+            to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1011262778 -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a ]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -dynamic -arch x86_64 -macosx_version_min 10.11.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1011262778 -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a ]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.11.0] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk] ==> ignore
+    arg [-o] ==> ignore
+    arg [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1011262778] ==> ignore
+    arg [-filelist] ==> ignore
+    arg [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778.LinkFileList] ==> ignore
+    arg [-v] ==> ignore
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-dependency_info] ==> ignore
+    arg [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1011262778.build/Objects-normal/x86_64/cmTryCompileExec1011262778_dependency_info.dat] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib]
+  Framework search paths: [;/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  collapse lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib]
+  collapse framework dir [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
+  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks]
+  implicit libs: [c++;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.0/lib/darwin/libclang_rt.osx.a]
+  implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/lib]
+  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks]
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec4022627284" "-configuration" "Debug"
+=== BUILD TARGET cmTryCompileExec4022627284 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64/cmTryCompileExec4022627284.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64/CheckIncludeFiles.o CheckIncludeFiles.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64/CheckIncludeFiles.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64/CheckIncludeFiles.dia -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64/CheckIncludeFiles.o
+
+Ld Debug/cmTryCompileExec4022627284 normal x86_64
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64/cmTryCompileExec4022627284.LinkFileList -mmacosx-version-min=10.11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec4022627284.build/Objects-normal/x86_64/cmTryCompileExec4022627284_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4022627284
+
+** BUILD SUCCEEDED **
+
+
+
+Determining if the pthread_create exist passed with the following output:
+Change Dir: /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Applications/CMake.app/Contents/bin/cmakexbuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTryCompileExec1231713743" "-configuration" "Debug"
+=== BUILD TARGET cmTryCompileExec1231713743 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Write auxiliary files
+/bin/mkdir -p /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64
+write-file /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64/cmTryCompileExec1231713743.LinkFileList
+
+CompileC CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export LANG=en_US.US-ASCII
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -Wno-sign-conversion -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/include -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/DerivedSources/x86_64 -I/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64/CheckSymbolExists.o
+
+Ld Debug/cmTryCompileExec1231713743 normal x86_64
+    cd /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp
+    export MACOSX_DEPLOYMENT_TARGET=10.11
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -F/Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug -filelist /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64/cmTryCompileExec1231713743.LinkFileList -mmacosx-version-min=10.11 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTryCompileExec1231713743.build/Objects-normal/x86_64/cmTryCompileExec1231713743_dependency_info.dat -o /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1231713743
+
+** BUILD SUCCEEDED **
+
+
+File /Users/galashovalexandr/Documents/Etudes/3A/1Periode/INF555/Proj/temp/INF555/new_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
