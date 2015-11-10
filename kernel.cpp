@@ -31,13 +31,17 @@ Vect Kernel::grad(Vect pi, Vect pj, double norm) {
     }
     double q = sqrt(norm) / h;
 
+    if(q == 0) {
+        return Vect(0,0,0);
+    }
+
     double temp;
 
     if (q >= 2) {
         return Vect(0, 0, 0);
     }
     if (q >= 1) {
-        temp = 3.0 / M_PI * (-q + 3.0 / 4.0 * q * q);
+        temp = 3.0 / M_PI * (-q + (3.0 / 4.0) * q * q);
     }
     if (q >= 0) {
         temp = -3.0 / (4.0 * M_PI) * pow(2 - q, 2);

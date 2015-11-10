@@ -11,11 +11,10 @@ using namespace pcl;
 
 double viscosity = 0.000001;
 double rhoInitial = 1.0;
-double timeStep = 0.01;
+double timeStep = 0.02;
 double stiffness = 0.1;
-int numberOfParticles = 2000;
+int numberOfParticles = 4000;
 double kernelSmoothingLength = 0.1;
-
 
 int timeInMilli() {
     timeval t;
@@ -65,6 +64,10 @@ double computeNewRho(shared_ptr<Particle> p, Kernel &w) {
         sum1 += n->w * w(norm);
         sum2 += ((p->speed - n->speed) * w.grad(p->pos, n->pos, norm));
     }
+    if(sum1 + timeStep * sum2 < 0.1) {
+        cout << "Small rho" << endl;
+    }
+
     return sum1 + timeStep * sum2;
 }
 
@@ -74,8 +77,7 @@ Vect computePressureForce(shared_ptr<Particle> p, Kernel &w) {
     for (shared_ptr<Particle> n: p->neighbours) {
         result += w.grad(p->pos, n->pos) * ((p->pressure / (p->rho * p->rho) + n->pressure / (n->rho * n->rho)) * n->w);
     }
-//    cout << result.x << endl;
-    return result * 1000;
+    return result*1000;
 }
 
 
@@ -85,7 +87,7 @@ int main() {
 
     Kernel w(kernelSmoothingLength);
     Vect v(0, 0, 0);
-    Grid g(v, 5, 2 * kernelSmoothingLength, timeStep);
+    Grid g(v, 10, 2 * kernelSmoothingLength, timeStep);
 
     srand(tps);
 

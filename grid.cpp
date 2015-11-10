@@ -80,10 +80,10 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
 
 void Grid::update() {
 
-    double speedRatio = 1.0;
+    double speedRatio = 0.8;
 
     for (Cell c: cells) {
-        vector<shared_ptr<Particle>> toRemove;
+        vector<shared_ptr<Particle>> toRemove, cellRemove;
         for (shared_ptr<Particle> p:c.particles) {
             p->pos += p->speed * timeStep;
 
@@ -124,14 +124,14 @@ void Grid::update() {
             int z = v.z / sizeThreshold;
             if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
                 toRemove.push_back(p);
-                remove(p);
+
 //                cout << p->pos.x << "  " << p->pos.y << "  " << p->pos.z << endl;
                 cout << p->rho << endl;
                 cout << "The particle is not inside the grid. It won't be inserted." << endl;
                 continue;
             }
             if (x != p->cellX || y != p->cellY || z != p->cellZ) {
-                toRemove.push_back(p);
+                cellRemove.push_back(p);
                 cells[z + rows * (y + rows * x)].add(p);
 
                 p->cellX = x;
@@ -140,6 +140,10 @@ void Grid::update() {
             }
         }
         for (shared_ptr<Particle> p:toRemove) {
+            c.remove(p);
+            remove(p);
+        }
+        for(shared_ptr<Particle> p: cellRemove) {
             c.remove(p);
         }
     }
