@@ -9,10 +9,10 @@
 using namespace std;
 using namespace pcl;
 
-double viscosity = 0.00001;
+double viscosity = 0.000001;
 double rhoInitial = 1.0;
 int totalTime = 10;
-double timeStep = 0.001;
+double timeStep = 0.0005;
 double stiffness = 10;
 int numberOfParticles = 1000;
 double kernelSmoothingLength = 0.1;
@@ -143,7 +143,7 @@ int main() {
     cv.spinOnce(1);
     int steps = totalTime / timeStep;
     for (int t = 0; t < steps; t++) {
-        if (t % 5 == 0) {
+        if (t % 1 == 0) {
             g.computeNeighbours();
         }
 

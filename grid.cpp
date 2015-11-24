@@ -123,7 +123,7 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
 
 void Grid::update() {
 
-    double speedRatio = 1.0;
+    double speedRatio = 0.9;
 
     for (Cell c: cells) {
         vector<shared_ptr<Particle>> toRemove, cellRemove;
