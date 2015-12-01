@@ -4,16 +4,17 @@
 #include <pcl/visualization/pcl_visualizer.h>
 #include "grid.h"
 #include "kernel.h"
+#include <unistd.h>
 
 
 using namespace std;
 using namespace pcl;
 
-double viscosity = 0.000001;
+double viscosity = 0.0001;
 double rhoInitial = 1.0;
 int totalTime = 10;
-double timeStep = 0.0005;
-double stiffness = 10;
+double timeStep = 0.0001;
+double stiffness = 0.00001;
 int numberOfParticles = 1000;
 double kernelSmoothingLength = 0.1;
 double gridSize = 2.0;
@@ -98,14 +99,14 @@ int main() {
 
     PointCloud<PointXYZRGB>::Ptr pc(new PointCloud<PointXYZRGB>(10, 10, PointXYZRGB(0, 255, 0)));
 
-    double mass = pow(kernelSmoothingLength, 3) * rhoInitial;
+    double mass = pow(0.2, 3) * rhoInitial * 4;
     for (int i = 0; i < numberOfParticles; i++) {
-        double x = (double) (rand() % 200) / 200.0;
-        double z = (double) (rand() % 200) / 200.0;
-        double y = (double) (rand() % 100) / 200.0 - (x * x + z * z) / 4;
+        double x = (double) (rand() % 400) / 200.0;
+        double z = (double) (rand() % 400) / 200.0;
+        double y = (double) (rand() % 200) / 200.0;
 
 
-        shared_ptr<Particle> p = make_shared<Particle>(x, y, z, mass, 0.1);
+        shared_ptr<Particle> p = make_shared<Particle>(x, y, z, mass, 0.01);
         p->speed = Vect(0, 0, 0);
         p->rho = rhoInitial;
         g.insert(p);
@@ -143,6 +144,8 @@ int main() {
     cv.spinOnce(1);
     int steps = totalTime / timeStep;
     for (int t = 0; t < steps; t++) {
+        double maxSpeed = 0;
+        int currentTime = timeInMilli();
         if (t % 1 == 0) {
             g.computeNeighbours();
         }
@@ -150,22 +153,35 @@ int main() {
         Vect gravity = Vect(0, -9.8, 0);
         for (shared_ptr<Particle> p : g.particles) {
             Vect visco = computeViscosityForce(p, w);
-            p->speed += (gravity) * (timeStep);
+            p->speed += (gravity + visco) * (timeStep);
         }
 
         for (shared_ptr<Particle> p : g.particles) {
             p->rho = computeNewRho(p, w);
 //            cout << p->rho << endl;
-            p->pressure = stiffness * (p->rho - rhoInitial);
+            p->pressure = stiffness *( pow(p->rho/rhoInitial,7) - 1);
         }
 
         for (shared_ptr<Particle> p: g.particles) {
             Vect pressureForce = computePressureForce(p, w);
 //            cout << pressureForce.norm() << "  -  " << p->neighbours.size() << endl;
             p->speed -= pressureForce * timeStep;
+            double normSpeed = p->speed.norm();
+            if(normSpeed > maxSpeed) {
+                maxSpeed = normSpeed;
+            }
         }
 
         g.update();
+
+//        if(t > 1000) {
+//            timeStep = 0.4 * 0.01 / sqrt(maxSpeed);
+//        }
+////        if(t % 1000 == 0) {
+////            timeStep /= 5;
+////        }
+//        cout << timeStep << endl;
+//        g.timeStep = timeStep;
 
         PointCloud<PointXYZRGB>::Ptr pc2(new PointCloud<PointXYZRGB>(10, 10, PointXYZRGB(0, 255, 0)));
         cv.setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 10, "cloud");
@@ -181,6 +197,10 @@ int main() {
         cv.addPointCloud(PointCloud<PointXYZRGB>::ConstPtr(pc2));
         cout << "Time " << t << endl;
         cv.spinOnce();
+        int timeDiff = timeInMilli() - currentTime;
+        if(timeDiff < 20) {
+            usleep(20 - timeDiff);
+        }
     }
 
     int b = timeInMilli();

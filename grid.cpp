@@ -123,7 +123,7 @@ void Grid::neighbours(shared_ptr<Particle> &p, double l) {
 
 void Grid::update() {
 
-    double speedRatio = 0.9;
+    double speedRatio = 1.0;
 
     for (Cell c: cells) {
         vector<shared_ptr<Particle>> toRemove, cellRemove;
@@ -165,7 +165,7 @@ void Grid::update() {
             int x = v.x / sizeThreshold;
             int y = v.y / sizeThreshold;
             int z = v.z / sizeThreshold;
-            if (x < 0 || y < 0 || z < 0 || x >= rows || y >= rows || z >= rows) {
+            if (x < 0 || y < 0 || z < 0 || x > rows || y > rows || z > rows) {
                 toRemove.push_back(p);
 
 //                cout << p->pos.x << "  " << p->pos.y << "  " << p->pos.z << endl;
